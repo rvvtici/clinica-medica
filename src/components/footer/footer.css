@@ -1,0 +1,17 @@
+#footer {
+    background-color: rgb(28, 28, 167);
+    color:white;
+    display: flex;
+    align-items: center;
+    flex-direction:row;
+    align-self: center;
+    font-family: "Palatino Linotype";
+    /* padding: 10px 10px; */
+    margin: 0;
+    padding: 0 0px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 30px;
+}
