@@ -62,12 +62,14 @@
     font-size: 14px;
 }
 
-.contianer .signup-link{
-    font-size: 14px;
-    text-align: center;
-    margin: 20px 0 10px;
-    display: flex;
-    align-items: center;
+.container .signup-link {
+  font-size: 14px;
+  text-align: center;
+  margin: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 10px; */
 }
 
 .container .link {
@@ -97,4 +99,12 @@
 .user-type-buttons button.active {
   background-color: rgb(28, 28, 167);
   color: white;
+}
+
+.signup-link button {
+  cursor: pointer;
+}
+
+.signup-link button:active {
+  background-color: rgb(20, 20, 120); /* mais escuro no clique */
 }

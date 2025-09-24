@@ -1,20 +1,26 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./cadastro.css";
-import Header from "../header/header.jsx"
-import Footer from "../footer/footer.jsx"
+import Header from "../header/header.jsx";
+import Footer from "../footer/footer.jsx";
 import { FaUser, FaLock } from "react-icons/fa";
 
 const Cadastro = () => {
-  const [username, setUsername] = useState(""); 
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
+  const [endereco, setEndereco] = useState("");
+  const [telefone, setTelefone] = useState("");
+  const [dataNascimento, setDataNascimento] = useState("");
   const [password, setPassword] = useState("");
-  const [userType, setUserType] = useState("paciente");
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Usuário:", username);
+    console.log("Nome:", nome);
+    console.log("Email:", email);
+    console.log("Endereço:", endereco);
+    console.log("Telefone:", telefone);
+    console.log("Data de Nascimento:", dataNascimento);
     console.log("Senha:", password);
-    console.log("Tipo:", userType);
   };
 
   return (
@@ -22,70 +28,66 @@ const Cadastro = () => {
       <Header />
       <div className="page">
         <div className="container">
-          {/* <div className="user-type-buttons">
-            <button
-              type="button"
-              className={userType === "paciente" ? "active" : ""}
-              onClick={() => setUserType("paciente")}
-            >
-              Paciente
-            </button>
-            <button
-              type="button"
-              className={userType === "funcionario" ? "active" : ""}
-              onClick={() => setUserType("funcionario")}
-            >
-              Funcionário
-            </button>
-          </div> */}
-
-          {/* Formulário */}
           <form onSubmit={handleSubmit}>
             <h1>Clínica Bem Estar</h1>
             <h2>Cadastro</h2>
 
             <div className="input-field">
-              {/* <FaUser className="icon" /> */}
               <input
-                type="Nome"
+                type="text"
                 placeholder="Nome Completo"
-                onChange={(e) => setUsername(e.target.value)}
+                value={nome}
+                onChange={(e) => setNome(e.target.value)}
+                required
               />
             </div>
 
             <div className="input-field">
-              {/* <FaUser className="icon" /> */}
               <input
                 type="email"
                 placeholder="Email"
-                onChange={(e) => setUsername(e.target.value)}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
               />
             </div>
 
             <div className="input-field">
-              {/* <FaUser className="icon" /> */}
               <input
-                type="endereco"
-                placeholder="Endereço"
-                onChange={(e) => setUsername(e.target.value)}
-              />
-            </div>
-
-            <div className="input-field">
-              {/* <FaUser className="icon" /> */}
-              <input
-                type="telefone"
+                type="tel"
                 placeholder="Telefone"
-                onChange={(e) => setUsername(e.target.value)}
+                value={telefone}
+                onChange={(e) => setTelefone(e.target.value)}
+                required
               />
             </div>
 
             <div className="input-field">
-              {/* <FaLock className="icon" /> */}
+              <input
+                type="text"
+                placeholder="Endereço"
+                value={endereco}
+                onChange={(e) => setEndereco(e.target.value)}
+              />
+            </div>
+
+            <div className="input-field">
+              <input
+                type="date"
+                placeholder="Data de Nascimento"
+                value={dataNascimento}
+                onChange={(e) => setDataNascimento(e.target.value)}
+              />
+            </div>
+
+            <div className="input-field">
+              <FaLock className="icon" />
               <input
                 type="password"
                 placeholder="Senha"
+                value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                required
               />
             </div>
 
@@ -93,12 +95,11 @@ const Cadastro = () => {
               <p>
                 Já possui conta? <Link className="link" to="/">Login</Link>
               </p>
-              <button>Cadastrar</button>
+              <button type="submit">Cadastrar</button>
             </div>
           </form>
         </div>
       </div>
-
       <Footer />
     </>
   );

@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 import "./login.css";
 import Header from "../header/header.jsx"
 import Footer from "../footer/footer.jsx"
-import { FaUser, FaLock } from "react-icons/fa";
+import { FaUser, FaEnvelope, FaLock } from "react-icons/fa";
 
 const Login = () => {
-  const [username, setUsername] = useState(""); 
+  const [email, setEmail] = useState(""); 
   const [password, setPassword] = useState("");
   const [userType, setUserType] = useState("paciente");
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Usuário:", username);
+    console.log("Email:", email);
     console.log("Senha:", password);
     console.log("Tipo:", userType);
   };
@@ -45,28 +45,30 @@ const Login = () => {
             <h2>Login</h2>
 
             <div className="input-field">
-              <FaUser className="icon" />
-              <input
-                type="email"
-                placeholder="Usuário/Email"
-                onChange={(e) => setUsername(e.target.value)}
-              />
+              <FaEnvelope className="icon" />
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
             </div>
 
             <div className="input-field">
               <FaLock className="icon" />
-              <input
-                type="password"
-                placeholder="Senha"
-                onChange={(e) => setPassword(e.target.value)}
-              />
+            <input
+              type="password"
+              placeholder="Senha"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />      
             </div>
 
             <div className="signup-link">
               <p>
                 Não possui uma conta? <Link className="link" to="/cadastro"> Cadastro</Link>
               </p>
-              <button>Login</button>
+              <button type="submit">Login</button>
             </div>
           </form>
         </div>
