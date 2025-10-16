@@ -1,0 +1,22 @@
+#header_medico {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
+  color:black;
+}
+
+.nav_links {
+  display: flex;
+  gap: 40px; /* espaçamento entre os links */
+}
+
+.link {
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.link:hover {
+  text-decoration: underline;
+}
