@@ -1,0 +1,59 @@
+/* Container geral de cada bloco */
+.container-item {
+  display: flex;
+  flex-direction: column;      /* empilha o texto e o botão */
+  align-items: center;         /* centraliza horizontalmente */
+  justify-content: center;     /* centraliza verticalmente */
+  text-align: center;
+  width: 80%;                  /* define largura padrão dos blocos */
+  max-width: 700px;            /* limita pra não ficar muito largo */
+  margin: 40px auto;           /* centraliza na tela */
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;   /* leve contraste pra destacar o bloco */
+  border-radius: 10px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* 🔵 Link como botão (agora com tamanho igual ao parágrafo) */
+.link {
+  display: block;
+  width: 100%;                 /* ocupa toda a largura do texto */
+  margin-top: 20px;
+  padding: 14px 0;
+  background-color: rgb(44, 137, 180);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+/* Efeitos de interação */
+.link:hover {
+  background-color: rgb(30, 100, 130);
+  transform: scale(1.02);
+}
+
+.link:active {
+  transform: scale(0.98);
+}
+
+/* Responsividade: em telas pequenas, mantém centralizado e reduz levemente tamanho */
+@media (max-width: 600px) {
+  .container-item {
+    width: 90%;
+    font-size: 16px;
+    padding: 20px 10px;
+  }
+
+  .link {
+    font-size: 16px;
+    padding: 12px 0;
+  }
+}

@@ -6,7 +6,7 @@ const Header = () =>{
     return(
         <div id="header">
             <FaHospital className="icon"></FaHospital>
-            <h2>Clínica Médica</h2>
+            <h4>Clínica Médica</h4>
         </div>
 
 

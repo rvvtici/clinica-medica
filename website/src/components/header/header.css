@@ -1,5 +1,5 @@
 #header {
-    background-color: rgb(28, 28, 167);
+    background-color: rgb(44, 137, 180);
     color:white;
     display: flex;
     align-items: center;
@@ -7,12 +7,13 @@
     justify-content: center;
     align-self: center;
     font-family: "Palatino Linotype";
-    padding: 10px 10px;
+    /* padding: 5px 5px; */
+    font-size:14px;
     margin: 0;
     padding: 0 0px;
 }
 
 .icon {
-    padding: 0 10px;
+    padding: 0 0px;
 }
 
