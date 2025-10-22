@@ -1,6 +1,4 @@
 #footer {
-    background-color: rgb(44, 137, 180);
-    color:white;
     display: flex;
     align-items: center;
     flex-direction:row;
@@ -8,12 +6,7 @@
     font-size:10px;
     align-self: center;
     font-family: "Palatino Linotype";
-    padding: 5px 5px;
-    margin: 0;
+    padding: 10px 10px;
+    margin: 10px 10px;
     padding: 0 0px;
 }
-
-.icon {
-    padding: 0 10px;
-}
-

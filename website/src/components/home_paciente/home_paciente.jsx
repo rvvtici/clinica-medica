@@ -11,66 +11,93 @@ const HomePaciente = () => {
 
   return (
     <>
-      <Header />
       <HeaderPaciente />
+      <div className="page-home-paciente">
 
-      <div class="user">
-        <p>Boas-vindas, nome_paciente</p>
-        <p></p>
+        <div className="title">
+          <p>Área do Paciente</p>
+        </div>
+
+        <div className="user">
+          <p>Boas-vindas, nome_paciente!</p>
+        </div>
+
+        <div className="container-item">
+          <h1 className="title-item">
+            Meu Convênio
+          </h1>
+          <p className="subtitle-item">
+            Consulte e gerencie suas informações de convênio, cobertura e dados cadastrais.
+          </p>
+          <button className="button-item">
+            <Link className="link" to="/home_paciente/perfil/convenio">Gerenciar Convênio</Link>
+          </button>
+        </div>
+
+        <div className="container-item">
+          <h1 className="title-item">
+            Agendar Consulta
+          </h1>
+          <p className="subtitle-item">
+            Nossas consultas podem ser realizadas tanto presencialmente quanto na nossa plataforma online.
+            A lista de especialidades médicas pode ser acessada aqui.
+            Caso tenha problemas, a consulta pode ser marcada também pelo contato (11) 2912-4294.
+          </p>
+          <button className="button-item">
+            <Link className="link" to="/especialidades">Ver Especialidades</Link>
+          </button>
+        </div>
+
+        <div className="container-item">
+          <h1 className="title-item">
+            Consulta Online
+          </h1>
+          <p className="subtitle-item">
+            Acesse nossa plataforma para consultas remotas com nossos especialistas.
+            
+          </p>
+          <button className="button-item">
+            <Link className="link" to="/home_paciente/online">Iniciar Consulta</Link>
+          </button>
+        </div>
+
+        <div className="container-item">
+          <h1 className="title-item">
+            Histórico Médico
+          </h1>
+          <p className="subtitle-item">
+            Acesse informações de consultas realizadas e agendadas, exames, atestados e receitas médicas.
+          </p>
+          <button className="button-item">
+            <Link className="link" to="/home_paciente/perfil/historico">Ver Histórico</Link>
+          </button>
+        </div>
+
+        <div className="container-item">
+          <h1 className="title-item">
+            Especialidades
+          </h1>
+          <p className="subtitle-item">
+            Conheça nossa equipe médica, especialidades disponíveis e dados profissionais.
+          </p>
+          <button className="button-item">
+            <Link className="link" to="/especialidades">Ver Especialistas</Link>
+          </button>
+        </div>
+
+        <div className="container-item">
+          <h1 className="title-item">
+            Convênios Parceiros
+          </h1>
+          <p className="subtitle-item">
+            Confira a lista completa de convênios aceitos e suas coberturas.
+          </p>
+          <button className="button-item">
+            <Link className="link" to="/convenios">Ver Convênios</Link>
+          </button>
+        </div>
+
       </div>
-
-      <div class="container-item">
-        <p>
-          consultas também podem ser realizadas e cobertas pelos nossos convênios cadastrados. 
-          <Link className="link" to="/convenios">Cadastrar convênio.</Link>
-        </p>
-      </div>
-
-
-      <div class="container-item">
-        <p>
-          Nossas consultas podem ser realizadas tanto presencialmente quanto na nossa plataforma online.
-          A lista de especialidades médicas pode ser acessada
-          {/* <Link className="teste" to="/especialidades">aqui.</Link> */}
-           aqui.
-          Caso em problemas, a consulta pode ser marcada também pelo contato (11) 2912-4294 
-          <Link className="link" to="/convenios">Marcar consulta</Link>
-        </p>
-      </div>
-
-
-      <div class="container-item">
-        <p>
-          Acessar nossa plataforma de consultas online
-          <Link className="link" to="/convenios">Consultas online</Link>
-        </p>
-      </div>
-
-
-      <div class="container-item">
-        <p>
-          Acesse informações de consultas realizadas e previstas, exames, atestados e receitas.
-          <Link className="link" to="/convenios">Histórico de consultas</Link>
-        </p>
-      </div>
-
-
-      <div class="container-item">
-        <p>
-          Lista de médicas, seus dados e especialidades
-          <Link className="link" to="/convenios">Especialidades médicas</Link>
-        </p>
-      </div>
-
-
-
-      <div class="container-item">
-        <p>
-          Informações dos convênios
-          <Link className="link" to="/convenios">Nossos convênios</Link>
-        </p>
-      </div>
-
       <Footer />
     </>
   );

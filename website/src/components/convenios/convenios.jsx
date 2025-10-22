@@ -6,42 +6,63 @@ import Footer from "../footer/footer.jsx";
 import { FaUser } from "react-icons/fa";
 
 const Convenio = () => {
-//   const [email, setEmail] = useState("");
-
   const convenios = [
-    { id: "unimed", nome: "Unimed" },
-    { id: "amil", nome: "Amil" },
-    { id: "sulamerica", nome: "SulAmérica" },
-    { id: "bradesco", nome: "Bradesco Saúde" },
-    { id: "porto", nome: "Porto Seguro Saúde" }
+    { 
+      id: "unimed", 
+      nome: "Unimed", 
+      link: "https://www.unimed.coop.br/site/" 
+    },
+    { 
+      id: "amil", 
+      nome: "Amil", 
+      link: "https://institucional.amil.com.br/" 
+    },
+    { 
+      id: "sulamerica", 
+      nome: "SulAmérica", 
+      link: "https://portal.sulamericaseguros.com.br/" 
+    },
+    { 
+      id: "bradesco", 
+      nome: "Bradesco Saúde", 
+      link: "https://www.bradescoseguros.com.br/clientes/produtos/plano-saude" 
+    },
+    { 
+      id: "porto", 
+      nome: "Porto Seguro Saúde", 
+      link: "https://www.portoseguro.com.br/porto-seguro-saude" 
+    }
   ];
-
 
   return (
     <>
       <HeaderPaciente />
-      <div class="page-convenios">        
+      <div className="page-convenios">        
         <p className="title">
           Convênios
         </p>
 
         <p className="content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-          in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur scelerisque dolor sapien. Aenean volutpat est felis, non pellentesque ligula volutpat et. Nam elementum nunc at tempus vulputate. Aliquam sed quam sit amet nunc laoreet auctor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque quis purus tincidunt, luctus libero non, commodo elit. Nullam turpis libero, sodales nec malesuada sed, ultricies id sem. Vivamus non imperdiet est. Vestibulum tempor nisi eget tincidunt venenatis. Curabitur vestibulum justo odio, in suscipit libero malesuada sed.
+        </p>
+        <p className="content">
+          Vestibulum finibus dui nec arcu porta, vitae sodales nisi feugiat. Sed tristique dignissim interdum. Integer elementum tempus tortor, id ullamcorper velit auctor eget. Aenean urna nunc, cursus sed malesuada ac, ullamcorper nec est. Suspendisse finibus, erat id pellentesque vulputate, augue nunc fermentum lectus, ac scelerisque magna lacus in ante. Mauris tempor neque orci, sed porttitor lacus luctus vel. Suspendisse vel mauris ipsum. Etiam vulputate consequat nibh ut sollicitudin.
+        </p>
+
+        <p className="content">
           A busca pode ser realizada selecionando o convênio e especialidade ou a 
           partir do nome do profissional.
         </p>
     
-      <ul className="lista-convenios">
-        {convenios.map((conv) => (
-          <li key={conv.id}>{conv.nome}</li>
-        ))}
-      </ul>
-    
-    
+        <ul className="lista-convenios">
+          {convenios.map((conv) => (
+            <li key={conv.id}>
+              <Link to={conv.link} className="link-convenio">
+                {conv.nome}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </>
   );

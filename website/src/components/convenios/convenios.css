@@ -1,27 +1,63 @@
 .page-convenios {
-    padding: 10px 400px 10px 10px;
-    margin: 0;
-    gap: 0;
-    /* font-size:16px; */
-}
-
-.page-convenios .content{
-    display:flex;
-    align-content: left;
-    padding: 12px 20px;
-    margin: 0px;
-    gap: 0px;
-    font-size: 12px;
-    flex-direction: column;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .page-convenios .title {
-    font-size: 22px;
-    font-weight: bold;
-    display:flex;
-    justify-content: left;
-    padding: 12px 20px;
-    margin: 0px;
-    gap: 0px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
 }
 
+.page-convenios .content {
+  text-align: left;
+  margin-bottom: 20px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.lista-convenios {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+  padding: 0;
+  list-style: none;
+}
+
+.lista-convenios p {
+  background-color: #f9f9f9;
+  padding: 15px 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin: 0;
+  color: #555;
+  font-size: 1rem;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.lista-convenios p:hover {
+  background-color: #f0f0f0;
+}
+
+.lista-convenios a {
+  display: block;
+  background-color: #f9f9f9;
+  padding: 15px 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  color: #555;
+  text-decoration: none;
+  font-size: 1rem;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.lista-convenios a:hover {
+  background-color: #f0f0f0;
+  text-decoration: none;
+}

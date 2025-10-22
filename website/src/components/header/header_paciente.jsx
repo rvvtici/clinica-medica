@@ -16,7 +16,7 @@ const HeaderPaciente = () => {
         <Link className="nav_link" to="/home_paciente">Home</Link>
         <Link className="nav_link" to="/especialidades">Especialidades</Link>
         <Link className="nav_link" to="/convenios">Convênios</Link>
-        <Link className="perfil" to="/perfil">Perfil</Link>
+        <Link className="perfil" to="/home_paciente/perfil">Perfil</Link>
       </nav>
         
     </div>
