@@ -44,7 +44,7 @@ const HomePaciente = () => {
             Caso tenha problemas, a consulta pode ser marcada também pelo contato (11) 2912-4294.
           </p>
           <button className="button-item">
-            <Link className="link" to="/especialidades">Ver Especialidades</Link>
+            <Link className="link" to="/home_paciente/consulta">Ver Especialidades</Link>
           </button>
         </div>
 

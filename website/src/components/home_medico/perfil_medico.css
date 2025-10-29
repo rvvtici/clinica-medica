@@ -1,0 +1,211 @@
+.page-perfil {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.page-perfil .title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.container-perfil {
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 25px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #ddd;
+}
+
+.section-header h3 {
+  margin: 0;
+  color: #333;
+  flex: 1;
+}
+
+.section-icon {
+  color: #333;
+  font-size: 1.2rem;
+}
+
+/* Dados Pessoais */
+.dados-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.dado-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.dado-item label {
+  font-weight: bold;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.dado-item span {
+  color: #666;
+  padding: 8px;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #eee;
+}
+
+.dado-item.full-width {
+  grid-column: 1 / -1;
+}
+
+/* Horários de Trabalho */
+.horarios-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.dia-trabalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.dia-header {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 200px;
+}
+
+.dia-header strong {
+  color: #333;
+  font-size: 1rem;
+}
+
+.dia-header .local {
+  color: #666;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.horarios-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.horario-item {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Informações Profissionais */
+.info-profissional {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 15px;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.info-icon {
+  color: #333;
+  font-size: 1.5rem;
+  margin-top: 2px;
+}
+
+.info-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.info-item strong {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.info-item span {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .page-perfil {
+    padding: 15px;
+  }
+  
+  .dados-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .dia-trabalho {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .horarios-list {
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .horario-item {
+    align-self: flex-start;
+  }
+  
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-perfil {
+    padding: 15px;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .section-header h3 {
+    font-size: 1.1rem;
+  }
+}

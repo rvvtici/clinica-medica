@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./login.css";
-import Header from "../header/header.jsx"
-import Footer from "../footer/footer.jsx"
+import Header from "../header/header.jsx";
+import Footer from "../footer/footer.jsx";
 import { FaUser, FaEnvelope, FaLock } from "react-icons/fa";
 
 const Login = () => {
@@ -19,9 +19,13 @@ const Login = () => {
 
   return (
     <>
-      <Header />
-      <div className="page">
-        <div className="container">
+      {/* <Header /> */}
+      <div className="page-login">
+        <div className="container-login">
+          <p className="title">
+            Acesse sua conta
+          </p>
+
           <div className="user-type-buttons">
             <button
               type="button"
@@ -39,41 +43,47 @@ const Login = () => {
             </button>
           </div>
 
-          {/* Formulário */}
-          <form onSubmit={handleSubmit}>
-            <h1>Clínica Bem Estar</h1>
-            <h2>Login</h2>
-
+          <form onSubmit={handleSubmit} className="form-login">
             <div className="input-field">
-              <FaEnvelope className="icon" />
-            <input
-              type="email"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
+              <label>Email:</label>
+              <div className="input-with-icon">
+                <FaEnvelope className="icon" />
+                <input
+                  type="email"
+                  placeholder="Digite seu email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </div>
             </div>
 
             <div className="input-field">
-              <FaLock className="icon" />
-            <input
-              type="password"
-              placeholder="Senha"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />      
+              <label>Senha:</label>
+              <div className="input-with-icon">
+                <FaLock className="icon" />
+                <input
+                  type="password"
+                  placeholder="Digite sua senha"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
+              </div>
             </div>
+
+            <button type="submit" className="btn-login">
+              Entrar
+            </button>
 
             <div className="signup-link">
               <p>
-                Não possui uma conta? <Link className="link" to="/cadastro"> Cadastro</Link>
+                Não possui uma conta? <Link className="link" to="/cadastro">Cadastre-se</Link>
               </p>
-              <button type="submit">Login</button>
             </div>
           </form>
         </div>
       </div>
-
       <Footer />
     </>
   );

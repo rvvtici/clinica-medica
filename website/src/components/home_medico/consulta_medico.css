@@ -1,0 +1,391 @@
+.page-consulta-medico {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page-consulta-medico .title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.container-consulta {
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 25px;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Informações do Paciente */
+.paciente-info, .proxima-consulta, .paciente-encontrado {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.paciente-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+}
+
+.paciente-dados {
+  flex: 1;
+}
+
+.paciente-dados h4 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.paciente-dados p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.consulta-horario {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.consulta-horario p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #333;
+  font-weight: bold;
+}
+
+.badge {
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.badge.presencial {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.badge.online {
+  background: #f3e5f5;
+  color: #7b1fa2;
+}
+
+/* Observações */
+.observacoes-paciente {
+  padding: 15px;
+  background: #fff3cd;
+  border-radius: 6px;
+  border-left: 4px solid #ffc107;
+}
+
+.observacoes-paciente h5 {
+  margin: 0 0 8px 0;
+  color: #856404;
+}
+
+.observacoes-paciente p {
+  margin: 0;
+  color: #856404;
+  white-space: pre-line;
+}
+
+/* Ações */
+.acoes-consulta, .acoes-paciente {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.btn-acao {
+  background: white;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.btn-acao:hover {
+  background: #f5f5f5;
+  border-color: #333;
+}
+
+/* Formulário de Atestado */
+.form-atestado {
+  padding: 20px;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-atestado h5 {
+  margin: 0 0 15px 0;
+  color: #333;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.input-field label {
+  font-weight: bold;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.input-field input, .input-field textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.input-field input:focus, .input-field textarea:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.btn-gerar-atestado {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-gerar-atestado:hover {
+  background: #218838;
+}
+
+/* Adicionar Observações */
+.adicionar-observacoes {
+  padding: 15px;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.adicionar-observacoes h5 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.input-observacao {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-observacao textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 80px;
+}
+
+.input-observacao textarea:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.btn-enviar {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-end;
+  font-size: 0.9rem;
+}
+
+.btn-enviar:hover {
+  background: #555;
+}
+
+/* Busca de Paciente */
+.busca-paciente {
+  margin-bottom: 20px;
+}
+
+.input-busca {
+  display: flex;
+  gap: 10px;
+}
+
+.input-busca input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.input-busca input:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.btn-buscar {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-buscar:hover {
+  background: #555;
+}
+
+/* Histórico e Exames */
+.historico-rapido, .exames-rapido {
+  margin-top: 15px;
+}
+
+.historico-rapido h5, .exames-rapido h5 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.consulta-item, .exame-item {
+  padding: 10px;
+  margin-bottom: 8px;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.consulta-item strong, .exame-item strong {
+  color: #333;
+}
+
+.consulta-item span, .exame-item span {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Link Consulta Online */
+.link-consulta-online {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.btn-online {
+  background: #1976d2;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s;
+}
+
+.btn-online:hover {
+  background: #1565c0;
+  color: white;
+  text-decoration: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .page-consulta-medico {
+    padding: 15px;
+  }
+  
+  .paciente-header {
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .consulta-horario {
+    text-align: left;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .acoes-consulta, .acoes-paciente {
+    grid-template-columns: 1fr;
+  }
+  
+  .input-busca {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.1rem;
+  }
+  
+  .btn-acao {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+}

@@ -1,22 +1,31 @@
-#header_medico {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 12px 0;
-  color:black;
+#header_medico{
+    display: flex;
+    align-items: center;
+    flex-direction:row;
+    justify-content: space-between;
+    align-self: center;
+    padding: 8px 20px;
+    margin: 0;
+    font-size: 14px;
 }
 
-.nav_links {
-  display: flex;
-  gap: 40px; /* espaçamento entre os links */
-}
-
-.link {
+#header_medico .nav_link {
   text-decoration: none;
-  font-size: 17px;
+  color: black;
+  padding: 8px 0px;
+    margin:0px 0px 0px 10px;
 }
 
-
-.link:hover {
+#header_medico .nav_link:hover {
   text-decoration: underline;
+}
+
+#header_medico .perfil {
+  color:white;
+  background: black;
+  text-decoration: none;
+  border: 6px solid black;
+  border-radius: 6px;
+  padding: 2px 6px;
+  margin: 0px 0px 0px 6px;
 }

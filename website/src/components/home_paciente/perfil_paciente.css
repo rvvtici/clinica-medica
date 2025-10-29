@@ -1,0 +1,252 @@
+.page-perfil {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.page-perfil .title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.container-perfil {
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 25px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #ddd;
+}
+
+.section-header h3 {
+  margin: 0;
+  color: #333;
+  flex: 1;
+}
+
+.section-icon {
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.btn-editar, .btn-expandir {
+  background-color: #333;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-editar:hover, .btn-expandir:hover {
+  background-color: #555;
+}
+
+/* Dados Pessoais */
+.dados-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.dado-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.dado-item label {
+  font-weight: bold;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.dado-item span {
+  color: #666;
+  padding: 8px;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #eee;
+}
+
+.dado-item.full-width {
+  grid-column: 1 / -1;
+}
+
+/* Família */
+.familia-resumo {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+.familia-resumo .info {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.familia-expandida {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.membro-familia {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.membro-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.membro-info strong {
+  color: #333;
+}
+
+.membro-info .parentesco {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  align-self: flex-start;
+}
+
+.membro-convenios {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+.membro-convenios strong {
+  color: #333;
+}
+
+/* Convênios */
+.convenios-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.convenio-item {
+  padding: 15px;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.convenio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.convenio-header strong {
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.convenio-header .plano {
+  background: #4caf50;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+
+.convenio-detalhes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Ações Rápidas */
+.acoes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.acao-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.acao-card:hover {
+  background: #f5f5f5;
+  border-color: #333;
+  transform: translateY(-2px);
+}
+
+.acao-card svg {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .page-perfil {
+    padding: 15px;
+  }
+  
+  .dados-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .membro-familia {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .membro-convenios {
+    text-align: left;
+  }
+  
+  .convenio-detalhes {
+    grid-template-columns: 1fr;
+  }
+  
+  .acoes-grid {
+    grid-template-columns: 1fr;
+  }
+}
