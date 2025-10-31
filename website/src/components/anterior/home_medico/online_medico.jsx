@@ -77,14 +77,7 @@ const OnlineMedico = () => {
     setObservacao("");
   };
 
-  const getStatusColor = (status) => {
-    switch(status) {
-      case 'agendada': return '#ffa500';
-      case 'realizada': return '#4caf50';
-      case 'cancelada': return '#f44336';
-      default: return '#666';
-    }
-  };
+
 
   return (
     <>
@@ -231,7 +224,7 @@ const OnlineMedico = () => {
                   </div>
                   <span 
                     className="status" 
-                    style={{ color: getStatusColor(consulta.status) }}
+
                   >
                     {consulta.status}
                   </span>

@@ -1,0 +1,647 @@
+.home-atendente {
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+.home-atendente {
+  width: 100%;
+}
+
+.header-atendente {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 20px;
+  margin: 0;
+  font-size: 14px;
+  background: white;
+}
+
+.header-atendente h1 {
+  font-size: 16px;
+  font-weight: 100;
+  margin: 0;
+  color: black;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-badge {
+  background: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #333;
+}
+
+.user-email {
+  color: #666;
+}
+
+.profile-btn {
+  color: white;
+  background: black;
+  text-decoration: none;
+  border: 6px solid black;
+  border-radius: 6px;
+  padding: 2px 6px;
+  margin: 0px 0px 0px 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.logout-btn {
+  text-decoration: none;
+  color: black;
+  padding: 6px 12px 6px 12px;
+  margin: 0px 0px 0px 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.main-atendente {
+  padding: 0px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.secao-busca-paciente,
+.secao-agendar {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 30px;
+}
+
+.titulo-secao {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #ddd;
+}
+
+.container-busca {
+  margin-bottom: 30px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.input-group label {
+  font-weight: bold;
+  color: #333;
+  min-width: 120px;
+}
+
+.input-group input,
+.input-group select {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.btn-buscar {
+  background-color: black;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-buscar:hover {
+  background-color: #333;
+}
+
+/* Resultado Paciente */
+.resultado-paciente {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.dados-paciente {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.dados-paciente h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+
+.info-grid p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.historico-paciente {
+  background: #fff3cd;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #ffc107;
+  margin-top: 15px;
+}
+
+.historico-paciente h4,
+.historico-paciente h5 {
+  margin: 10px 0 8px 0;
+  color: #856404;
+}
+
+.historico-paciente p {
+  margin: 5px 0;
+  color: #856404;
+  line-height: 1.5;
+}
+
+.historico-paciente ul {
+  margin: 5px 0;
+  padding-left: 20px;
+  color: #856404;
+}
+
+/* Convênios */
+.convenios-paciente {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.convenios-paciente h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+}
+
+.convenio-item {
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.convenio-item p {
+  margin: 5px 0;
+  color: #666;
+}
+
+/* Consultas Anteriores */
+.consultas-anteriores {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.consultas-anteriores h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.consulta-item {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.consulta-header {
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.consulta-header:hover {
+  background: #f5f5f5;
+}
+
+.consulta-header p {
+  margin: 3px 0;
+  color: #666;
+}
+
+.status {
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.status.realizada {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status.agendada {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.consulta-detalhes {
+  padding: 15px;
+  background: #f9f9f9;
+  border-top: 1px solid #ddd;
+}
+
+.detalhes-item {
+  margin-bottom: 15px;
+}
+
+.detalhes-item:last-child {
+  margin-bottom: 0;
+}
+
+.detalhes-item h5 {
+  margin: 0 0 8px 0;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.detalhes-item p {
+  margin: 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+.detalhes-item ul {
+  margin: 5px 0;
+  padding-left: 20px;
+  color: #666;
+}
+
+.sem-dados {
+  text-align: center;
+  color: #999;
+  padding: 20px;
+}
+
+/* Busca Médico */
+.container-busca-medico {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.busca-medico-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.ou-divider {
+  text-align: center;
+  color: #666;
+  font-weight: bold;
+  position: relative;
+  margin: 10px 0;
+}
+
+.ou-divider::before,
+.ou-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.ou-divider::before {
+  left: 0;
+}
+
+.ou-divider::after {
+  right: 0;
+}
+
+/* Informações do Médico */
+.info-medico {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.info-medico h3,
+.info-medico h4 {
+  margin: 0 0 15px 0;
+  color: #333;
+}
+
+.medico-dados {
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.medico-dados p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.convenios-aceitos {
+  margin-bottom: 20px;
+}
+
+.convenios-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.convenio-badge {
+  background: #667eea;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Agenda */
+.agenda-medico {
+  margin-top: 20px;
+}
+
+.calendario {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.dia-calendario {
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.dia-calendario:hover {
+  border-color: #333;
+  transform: translateY(-2px);
+}
+
+.dia-calendario.selecionado {
+  background: black;
+  border-color: black;
+}
+
+.numero-dia {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.dia-calendario.selecionado .numero-dia {
+  color: white;
+}
+
+/* Horários */
+.horarios-dia {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-top: 20px;
+}
+
+.horarios-dia h4 {
+  margin: 0 0 15px 0;
+  color: #333;
+}
+
+.lista-horarios {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.horario-item {
+  padding: 12px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  border: 2px solid;
+}
+
+.horario-item.disponivel {
+  background: #d4edda;
+  border-color: #28a745;
+}
+
+.horario-item.ocupado {
+  background: #f8d7da;
+  border-color: #dc3545;
+}
+
+.hora {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.horario-item.disponivel .hora {
+  color: #155724;
+}
+
+.horario-item.ocupado .hora {
+  color: #721c24;
+}
+
+.status-horario {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .main-atendente {
+    padding: 20px;
+  }
+  
+  .input-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .input-group label {
+    min-width: auto;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .calendario {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .lista-horarios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Botão pequeno */
+.btn-pequeno {
+  padding: 8px 16px !important;
+  font-size: 0.9rem !important;
+  width: auto !important;
+}
+
+/* Layout em coluna para dados */
+.info-coluna {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Container único para dados e convênios */
+.dados-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+/* Convênios dentro do container de dados */
+.dados-container .convenios-paciente {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+/* Headers expandíveis */
+.consultas-header,
+.exames-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.consultas-header:hover,
+.exames-header:hover {
+  background: #f0f0f0;
+}
+
+.consultas-header h3,
+.exames-header h3 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Containers de consultas e exames */
+.consultas-container,
+.exames-container {
+  margin-bottom: 20px;
+}
+
+.exames-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.exames-agendados,
+.exames-realizados,
+.resultados-exames {
+  margin-bottom: 20px;
+}
+
+.exames-agendados:last-child,
+.exames-realizados:last-child,
+.resultados-exames:last-child {
+  margin-bottom: 0;
+}
+
+.exames-content h4 {
+  margin: 0 0 15px 0;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+/* Status para consultas agendadas */
+.status.agendada {
+  background: #fff3cd;
+  color: #856404;
+}
+
+/* Botão Editar Perfil */
+.profile-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

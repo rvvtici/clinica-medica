@@ -1,60 +1,38 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-// import { useState } from "react";
-// import "./App.css";
-import Cadastro from "./components/cadastro/cadastro.jsx";
-import Login from "./components/login/login.jsx";
-import HomeMedico from "./components/home_medico/home_medico.jsx";
-import HomeFuncionario from "./components/home_funcionario/home_funcionario.jsx";
-import HomePaciente from "./components/home_paciente/home_paciente.jsx";
-import ConsultaMedico from "./components/home_medico/consulta_medico.jsx";
-import OnlineMedico from "./components/home_medico/online_medico.jsx";
-import PerfilMedico from "./components/home_medico/perfil_medico.jsx";
-
-
-import ConvenioPaciente from "./components/home_paciente/convenio_paciente.jsx";
-import PerfilPaciente from "./components/home_paciente/perfil_paciente.jsx";
-import HistoricoPaciente from "./components/home_paciente/historico_paciente.jsx";
-import ConsultaPaciente from "./components/home_paciente/consulta_paciente.jsx";
-import OnlinePaciente from "./components/home_paciente/online_paciente.jsx";
-import EditarPerfil from "./components/home_paciente/editar_perfil.jsx";
-
-import Convenios from "./components/convenios/convenios.jsx";
-import Especialidades from "./components/especialidades/especialidades.jsx";
-
-
-
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { AuthProvider } from './components/Auth/AuthContext';
+import ProtectedRoute from './components/Auth/ProtectedRoute';
+import Login from './components/Login/Login';
+import Home from './components/Home/Home';
+import Profile from './components/Perfil/Profile';
 
 function App() {
   return (
-    <div>
-      <BrowserRouter>
+    <Router>
+      <AuthProvider>
         <Routes>
-          <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/cadastro" element={<Cadastro />} />
-
-          <Route path="/convenios" element={<Convenios />} />
-          <Route path="/especialidades" element={<Especialidades />} />
-
-          <Route path="/home_paciente" element={<HomePaciente />} />
-          <Route path="/home_paciente/consulta" element={<ConsultaPaciente />} />
-
-          <Route path="/home_paciente/perfil" element={<PerfilPaciente />} />
-          <Route path="/home_paciente/perfil/editar" element={<EditarPerfil />} />
-          <Route path="/home_paciente/perfil/historico" element={<HistoricoPaciente />} />
-          <Route path="/home_paciente/online" element={<OnlinePaciente />} />
-
-          <Route path="/home_funcionario" element={<HomeFuncionario />} />
-
-          <Route path="/home_medico" element={<HomeMedico />} />
-          <Route path="/home_medico/online" element={<OnlineMedico />} />
-          <Route path="/home_medico/consulta" element={<ConsultaMedico />} />
-          <Route path="/home_medico/perfil" element={<PerfilMedico />} />
-
-
+          <Route 
+            path="/home" 
+            element={
+              <ProtectedRoute>
+                <Home />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/profile" 
+            element={
+              <ProtectedRoute>
+                <Profile />
+              </ProtectedRoute>
+            } 
+          />
+          <Route path="/" element={<Navigate to="/login" replace />} />
+          <Route path="*" element={<Navigate to="/login" replace />} />
         </Routes>
-      </BrowserRouter>
-    </div>
+      </AuthProvider>
+    </Router>
   );
 }
 

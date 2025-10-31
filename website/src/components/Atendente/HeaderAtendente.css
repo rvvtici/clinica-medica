@@ -1,0 +1,36 @@
+#header_atendente{
+    display: flex;
+    align-items: center;
+    flex-direction:row;
+    justify-content: space-between;
+    align-self: center;
+    padding: 8px 20px;
+    margin: 0;
+    font-size: 14px;
+}
+
+#header_atendente .nav_link {
+  text-decoration: none;
+  color: black;
+  padding: 8px 0px;
+    margin:0px 0px 0px 10px;
+}
+
+#header_atendente .nav_link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#header_atendente .perfil {
+  color:white;
+  background: black;
+  text-decoration: none;
+  border: 6px solid black;
+  border-radius: 6px;
+  padding: 2px 6px;
+  margin: 0px 0px 0px 6px;
+}
+
+#header_atendente .perfil:hover {
+    cursor: pointer;
+}
