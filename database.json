@@ -1,0 +1,841 @@
+{
+  "users": {
+    "WX6bPiVuceSopkthefm7ysjZL343": {
+      "email": "atendente@clinica.com",
+      "nome": "Maria Silva",
+      "tipo": "atendente"
+    },
+    "rTqhmrtmkFVFS762GLGD2U0DUbq1": {
+      "email": "medico@clinica.com",
+      "nome": "Dr. João Santos",
+      "tipo": "medico",
+      "crm": "12345"
+    },
+    "Q2nMDYAnsvaGcSOoGnpRQ4Sz8IG2" : {
+      "email": "diego.potassio@clinica.com",
+      "tipo": "medico"
+
+    },
+    
+    "0b4McuiLA3P4FZ9u7YrG2d1YNqz2" : {
+      "email": "ana.santos@clinica.com",
+      "tipo": "medico"
+
+    },
+    
+    "P9Mwa9NBo4f1oD7YwAuy3Wx1R9u1" : {
+      "email": "carlos.silva@clinica.com",
+      "tipo": "medico"
+
+    },
+    
+    "YUXHhimh6TXYvmLKcVkseiRNuV12" : {
+      "email": "mariana.lima@clinica.com",
+      "tipo": "medico"
+
+    },
+        "o8txKkLRIYgcHkEBx6EFEPGFF1j1" : {
+      "email": "roberto.alves@clinica.com",
+      "tipo": "medico"
+
+    }
+  },
+  "paciente": {
+    "12345678900": {
+      "cpf": "123.456.789-00",
+      "nomeCompleto": "João Silva Santos",
+      "idFamilia": "FAM001",
+      "email": "joao.silva@email.com",
+      "celular": "(11) 98765-4321",
+      "endereco": "Rua das Flores, 123 - São Paulo/SP",
+      "nascimento": "20/08/1975"
+    },
+    "98765432100": {
+      "cpf": "987.654.321-00",
+      "nomeCompleto": "Maria Santos Oliveira",
+      "idFamilia": "FAM002",
+      "email": "maria.oliveira@email.com",
+      "celular": "(11) 98888-7777",
+      "endereco": "Av. Paulista, 1000 - São Paulo/SP",
+      "nascimento": "15/03/1986"
+    },
+    "23456789011": {
+      "cpf": "234.567.890-11",
+      "nomeCompleto": "Ana Costa Pereira",
+      "idFamilia": "FAM003",
+      "email": "ana.costa@email.com",
+      "celular": "(11) 97777-6666",
+      "endereco": "Rua Augusta, 500 - São Paulo/SP",
+      "nascimento": "12/11/1990"
+    },
+    "34567890122": {
+      "cpf": "345.678.901-22",
+      "nomeCompleto": "Carlos Eduardo Lima",
+      "idFamilia": "FAM004",
+      "email": "carlos.lima@email.com",
+      "celular": "(11) 96666-5555",
+      "endereco": "Rua Oscar Freire, 300 - São Paulo/SP",
+      "nascimento": "05/07/1982"
+    },
+    "45678901233": {
+      "cpf": "456.789.012-33",
+      "nomeCompleto": "Fernanda Alves Rodrigues",
+      "idFamilia": "FAM004",
+      "email": "fernanda.alves@email.com",
+      "celular": "(11) 95555-4444",
+      "endereco": "Av. Faria Lima, 2000 - São Paulo/SP",
+      "nascimento": "22/09/1995"
+    }
+  },
+  "convenioPaciente": {
+    "CART001": {
+      "carteirinha": "CART001",
+      "idConv": "CONV001",
+      "cpf": "12345678900",
+      "validade": "31/12/2025"
+    },
+    "CART002": {
+      "carteirinha": "CART002",
+      "idConv": "CONV001",
+      "cpf": "98765432100",
+      "validade": "30/06/2025"
+    },
+    "CART003": {
+      "carteirinha": "CART003",
+      "idConv": "CONV002",
+      "cpf": "98765432100",
+      "validade": "15/08/2025"
+    },
+    "CART004": {
+      "carteirinha": "CART004",
+      "idConv": "CONV003",
+      "cpf": "23456789011",
+      "validade": "20/10/2025"
+    },
+    "CART005": {
+      "carteirinha": "CART005",
+      "idConv": "CONV001",
+      "cpf": "34567890122",
+      "validade": "28/02/2026"
+    },
+    "CART006": {
+      "carteirinha": "CART006",
+      "idConv": "CONV002",
+      "cpf": "45678901233",
+      "validade": "15/12/2025"
+    },    
+    "CART007": {
+      "carteirinha": "CART007",
+      "idConv": "CONV002",
+      "cpf": "34567890122",
+      "validade": "15/12/2025"
+    },
+      "CART008": {
+      "carteirinha": "CART008",
+      "idConv": "CONV001",
+      "cpf": "45678901233",
+      "validade": "28/02/2026"
+    }
+  },
+  "convenioClinica": {
+    "CONV001": {
+      "idConv": "CONV001",
+      "nome": "Unimed",
+      "medicos": ["90453", "73159", "78321"]
+    },
+    "CONV002": {
+      "idConv": "CONV002",
+      "nome": "Amil",
+      "medicos": ["65987", "82456"]
+    },
+    "CONV003": {
+      "idConv": "CONV003",
+      "nome": "SulAmérica",
+      "medicos": ["82456", "90453"]
+    }
+  },
+  "familia": {
+    "FAM001": {
+      "idFamilia": "FAM001",
+      "membros": ["12345678900"]
+    },
+    "FAM002": {
+      "idFamilia": "FAM002",
+      "membros": ["98765432100"]
+    },
+    "FAM003": {
+      "idFamilia": "FAM003",
+      "membros": ["23456789011"]
+    },
+    "FAM004": {
+      "idFamilia": "FAM004",
+      "membros": ["34567890122", "45678901233"]
+    }
+  },  "consulta": {
+    "CONS001": {
+      "idConsulta": "CONS001",
+      "cpfPaciente": "12345678900",
+      "cpfMedico": "90453",
+      "data": "31/10/2025",
+      "horario": "10:30",
+      "especialidade": "Cardiologia",
+      "status": "realizada",
+      "idPagamento": "PAG001",
+      "tipo": "consulta",
+      "local": "presencial",
+      "link": null,
+      "queixas": "Dores no peito e falta de ar ao subir escadas"
+    },
+    "CONS002": {
+      "idConsulta": "CONS002",
+      "cpfPaciente": "98765432100",
+      "cpfMedico": "90453",
+      "data": "31/10/2025",
+      "horario": "18:00",
+      "especialidade": "Cardiologia",
+      "status": "agendada",
+      "idPagamento": "PAG002",
+      "tipo": "retorno",
+      "local": "online",
+      "linkConsulta": "https://zoom.us/j/1234567890",
+      "queixas": "Retorno para avaliação de exames"
+    },
+    "CONS003": {
+      "idConsulta": "CONS003",
+      "cpfPaciente": "23456789011",
+      "cpfMedico": "90453",
+      "data": "31/10/2025",
+      "horario": "14:00",
+      "especialidade": "Cardiologia",
+      "status": "agendada",
+      "idPagamento": "PAG003",
+      "tipo": "consulta",
+      "local": "presencial",
+      "linkConsulta": null,
+      "queixas": "Pressão alta frequente"
+    },
+    "CONS004": {
+      "idConsulta": "CONS004",
+      "cpfPaciente": "34567890122",
+      "cpfMedico": "78321",
+      "data": "31/10/2025",
+      "horario": "18:00",
+      "especialidade": "Dermatologia",
+      "status": "agendada",
+      "idPagamento": "PAG004",
+      "tipo": "consulta",
+      "local": "presencial",
+      "linkConsulta": null,
+      "queixas": "Acne persistente no rosto"
+    },
+    "CONS005": {
+      "idConsulta": "CONS005",
+      "cpfPaciente": "45678901233",
+      "cpfMedico": "65987",
+      "data": "31/10/2025",
+      "horario": "10:00",
+      "especialidade": "Pediatria",
+      "status": "agendada",
+      "idPagamento": "PAG005",
+      "tipo": "consulta",
+      "local": "presencial",
+      "linkConsulta": null,
+      "queixas": "Consulta de rotina"
+    },
+    "CONS006": {
+      "idConsulta": "CONS006",
+      "cpfPaciente": "12345678900",
+      "cpfMedico": "90453",
+      "data": "03/11/2025",
+      "horario": "09:00",
+      "especialidade": "Cardiologia",
+      "status": "agendada",
+      "idPagamento": "PAG007",
+      "tipo": "retorno",
+      "local": "presencial",
+      "linkConsulta": null,
+      "queixas": "Retorno para avaliação pós-exames"
+    },
+    "CONS007": {
+      "idConsulta": "CONS007",
+      "cpfPaciente": "98765432100",
+      "cpfMedico": "78321",
+      "data": "03/11/2025",
+      "horario": "14:00",
+      "especialidade": "Dermatologia",
+      "status": "agendada",
+      "idPagamento": "PAG008",
+      "tipo": "consulta",
+      "local": "presencial",
+      "linkConsulta": null,
+      "queixas": "Manchas na pele"
+    },
+    "CONS008": {
+      "idConsulta": "CONS008",
+      "cpfPaciente": "23456789011",
+      "cpfMedico": "65987",
+      "data": "03/11/2025",
+      "horario": "11:00",
+      "especialidade": "Pediatria",
+      "status": "agendada",
+      "idPagamento": "PAG009",
+      "tipo": "consulta",
+      "local": "online",
+      "linkConsulta": "https://zoom.us/j/9876543210",
+      "queixas": "Febre e tosse há 3 dias"
+    },
+    "CONS009": {
+      "idConsulta": "CONS009",
+      "cpfPaciente": "34567890122",
+      "cpfMedico": "90453",
+      "data": "07/11/2025",
+      "horario": "10:00",
+      "especialidade": "Cardiologia",
+      "status": "agendada",
+      "idPagamento": "PAG010",
+      "tipo": "consulta",
+      "local": "presencial",
+      "linkConsulta": null,
+      "queixas": "Palpitações e cansaço excessivo"
+    },
+    "CONS010": {
+      "idConsulta": "CONS010",
+      "cpfPaciente": "45678901233",
+      "cpfMedico": "78321",
+      "data": "07/11/2025",
+      "horario": "15:00",
+      "especialidade": "Dermatologia",
+      "status": "agendada",
+      "idPagamento": "PAG011",
+      "tipo": "consulta",
+      "local": "presencial",
+      "linkConsulta": null,
+      "queixas": "Queda de cabelo acentuada"
+    },
+    "CONS011": {
+      "idConsulta": "CONS011",
+      "cpfPaciente": "12345678900",
+      "cpfMedico": "65987",
+      "data": "07/11/2025",
+      "horario": "16:00",
+      "especialidade": "Pediatria",
+      "status": "agendada",
+      "idPagamento": "PAG012",
+      "tipo": "consulta",
+      "local": "online",
+      "linkConsulta": "https://zoom.us/j/1122334455",
+      "queixas": "Acompanhamento de vacinação"
+    },
+    "EXAM001": {
+      "idConsulta": "EXAM001",
+      "cpfPaciente": "12345678900",
+      "cpfMedico": "90453",
+      "data": "31/10/2025",
+      "horario": null,
+      "especialidade": "Ecocardiograma",
+      "status": "agendada",
+      "idPagamento": "PAG006",
+      "tipo": "exame",
+      "local": null,
+      "linkConsulta": null,
+      "queixas": "Exame solicitado para avaliação cardíaca"
+    }
+  },
+
+   "pagamento": 
+   {
+    "PAG001": {
+      "idPagamento": "PAG001",
+      "status": "pago",
+      "data": "15/01/2025",
+      "valor": 250.00
+    },
+    "PAG002": {
+      "idPagamento": "PAG002",
+      "status": "pendente",
+      "data": "25/01/2025",
+      "valor": 180.00
+    },
+    "PAG003": {
+      "idPagamento": "PAG003",
+      "status": "pendente",
+      "data": "25/01/2025",
+      "valor": 250.00
+    },
+    "PAG004": {
+      "idPagamento": "PAG004",
+      "status": "pendente",
+      "data": "26/01/2025",
+      "valor": 250.00
+    },
+    "PAG005": {
+      "idPagamento": "PAG005",
+      "status": "pendente",
+      "data": "27/01/2025",
+      "valor": 250.00
+    },
+    "PAG006": {
+      "idPagamento": "PAG006",
+      "status": "pendente",
+      "data": "28/01/2025",
+      "valor": 350.00
+    },
+    "PAG007": {
+      "idPagamento": "PAG007",
+      "status": "pendente",
+      "data": "03/11/2025",
+      "valor": 180.00
+    },
+    "PAG008": {
+      "idPagamento": "PAG008",
+      "status": "pendente",
+      "data": "03/11/2025",
+      "valor": 280.00
+    },
+    "PAG009": {
+      "idPagamento": "PAG009",
+      "status": "pendente",
+      "data": "03/11/2025",
+      "valor": 220.00
+    },
+    "PAG010": {
+      "idPagamento": "PAG010",
+      "status": "pendente",
+      "data": "07/11/2025",
+      "valor": 250.00
+    },
+    "PAG011": {
+      "idPagamento": "PAG011",
+      "status": "pendente",
+      "data": "07/11/2025",
+      "valor": 280.00
+    },
+    "PAG012": {
+      "idPagamento": "PAG012",
+      "status": "pendente",
+      "data": "07/11/2025",
+      "valor": 220.00
+    }
+  },
+  "registroMedico": {
+    "REG001": {
+      "idRegistroMedico": "REG001",
+      "idConsulta": "CONS001",
+      "examesSolicitados": [
+        "Ecocardiograma",
+        "Eletrocardiograma"
+      ],
+      "medicamentosSolicitados": [
+        "AAS 100mg - 1x ao dia",
+        "Losartana 50mg - 1x ao dia"
+      ],
+      "observacoesMedicas": "Paciente apresenta melhora significativa. Manter medicação atual. Retorno em 3 meses.",
+      "receitas": [],
+      "atestado": ""
+    }
+  },
+  "dadosAdicionaisPaciente": {
+    "12345678900": {
+      "cpf": "12345678900",
+      "historico": "Ex-fumante há 10 anos. Sem comorbidades conhecidas.",
+      "medicamentos": [],
+      "tipoSanguineo": "O+",
+      "contatoEmergencia": {
+        "nomeCompleto": "Maria Silva Santos",
+        "celular": "(11) 98888-8888"
+      }
+    },
+    "98765432100": {
+      "cpf": "98765432100",
+      "historico": "Hipertensão arterial há 5 anos. Diabetes tipo 2 controlada. Alergia a dipirona.",
+      "medicamentos": [
+        "AAS 100mg",
+        "Losartana 50mg",
+        "Sinvastatina 20mg"
+      ],
+      "tipoSanguineo": "A+",
+      "contatoEmergencia": {
+        "nomeCompleto": "Pedro Oliveira",
+        "celular": "(11) 99999-9999"
+      }
+    },
+    "23456789011": {
+      "cpf": "23456789011",
+      "historico": "Histórico familiar de hipertensão. Mede pressão arterial em casa com valores entre 130-140x80-90 mmHg.",
+      "medicamentos": [
+        "Anticoncepcional oral"
+      ],
+      "tipoSanguineo": "B+",
+      "contatoEmergencia": {
+        "nomeCompleto": "Carlos Pereira",
+        "celular": "(11) 97777-7777"
+      }
+    },
+    "34567890122": {
+      "cpf": "34567890122",
+      "historico": "Acne moderada. Tratamento prévio com antibióticos.",
+      "medicamentos": [],
+      "tipoSanguineo": "AB+",
+      "contatoEmergencia": {
+        "nomeCompleto": "Márcia Lima",
+        "celular": "(11) 96666-6666"
+      }
+    },
+    "45678901233": {
+      "cpf": "45678901233",
+      "historico": "Saudável. Sem histórico de doenças crônicas.",
+      "medicamentos": [],
+      "tipoSanguineo": "O-",
+      "contatoEmergencia": {
+        "nomeCompleto": "Roberto Alves",
+        "celular": "(11) 95555-5555"
+      }
+    }
+  },
+  "examesTipo": {
+    "EXAM001": {
+      "idExame": "EXAM001",
+      "tipo": "Ecocardiograma",
+      "preco": 350.00,
+      "coberturaConvenio": ["CONV001", "CONV002"]
+    },
+    "EXAM002": {
+      "idExame": "EXAM002",
+      "tipo": "Eletrocardiograma",
+      "preco": 80.00,
+      "coberturaConvenio": ["CONV001", "CONV002", "CONV003"]
+    },
+    "EXAM003": {
+      "idExame": "EXAM003",
+      "tipo": "Hemograma Completo",
+      "preco": 45.00,
+      "coberturaConvenio": ["CONV001", "CONV003"]
+    },
+    "EXAM004": {
+      "idExame": "EXAM004",
+      "tipo": "Raio-X de Tórax",
+      "preco": 120.00,
+      "coberturaConvenio": ["CONV002", "CONV003"]
+    }
+  },
+"consultasTipo": {
+  "TIPO001": {
+    "idConsultaTipo": "TIPO001",
+    "especialidade": "Cardiologia",
+    "preco": 250.00
+  },
+  "TIPO002": {
+    "idConsultaTipo": "TIPO002",
+    "especialidade": "Dermatologia",
+    "preco": 280.00
+  },
+  "TIPO003": {
+    "idConsultaTipo": "TIPO003",
+    "especialidade": "Pediatria",
+    "preco": 220.00
+  },
+  "TIPO004": {
+    "idConsultaTipo": "TIPO004",
+    "especialidade": "Neurologia",
+    "preco": 300.00
+  },
+  "TIPO005": {
+    "idConsultaTipo": "TIPO005",
+    "especialidade": "Ortopedia",
+    "preco": 270.00
+  }
+},
+  "medico": {
+    "90453": {
+      "cpf": "904.530.000-00",
+      "cpfNumerico": "90453",
+      "nomeCompleto": "Dr. Diego Potássio",
+      "email": "diego.potassio@clinica.com",
+      "celular": "(11) 91111-1111",
+      "endereco": "Rua dos Médicos, 100",
+      "nascimento": "10/05/1980",
+      "crm": "90.453",
+      "especialidades": ["Cardiologia"],
+      "idAgenda": "AGD90453",
+          "expediente": {
+      "segunda": { "inicio": "09:00", "fim": "17:00" },
+      "terca": { "inicio": "09:00", "fim": "17:00" },
+      "quarta": { "inicio": "09:00", "fim": "17:00" },
+      "quinta": { "inicio": "09:00", "fim": "17:00" },
+      "sexta": { "inicio": "09:00", "fim": "14:00" },
+      "sabado": { "inicio": null, "fim": null },
+      "domingo": { "inicio": null, "fim": null }
+    }
+    },
+    "78321": {
+      "cpf": "783.210.000-00",
+      "cpfNumerico": "78321",
+      "nomeCompleto": "Dra. Ana Santos",
+      "email": "ana.santos@clinica.com",
+      "celular": "(11) 92222-2222",
+      "endereco": "Rua dos Médicos, 101",
+      "nascimento": "20/08/1985",
+      "crm": "78.321",
+      "especialidades": ["Dermatologia"],
+      "idAgenda": "AGD78321",
+          "expediente": {
+      "segunda": { "inicio": "08:00", "fim": "16:00" },
+      "terca": { "inicio": "08:00", "fim": "16:00" },
+      "quarta": { "inicio": "08:00", "fim": "16:00" },
+      "quinta": { "inicio": "08:00", "fim": "16:00" },
+      "sexta": { "inicio": "08:00", "fim": "12:00" },
+      "sabado": { "inicio": null, "fim": null },
+      "domingo": { "inicio": null, "fim": null }
+    }
+    },
+    "65987": {
+      "cpf": "659.870.000-00",
+      "cpfNumerico": "65987",
+      "nomeCompleto": "Dr. Carlos Silva",
+      "email": "carlos.silva@clinica.com",
+      "celular": "(11) 93333-3333",
+      "endereco": "Rua dos Médicos, 102",
+      "nascimento": "15/03/1978",
+      "crm": "65.987",
+      "especialidades": ["Pediatria"],
+      "idAgenda": "AGD65987",
+          "expediente": {
+      "segunda": { "inicio": "10:00", "fim": "18:00" },
+      "terca": { "inicio": "10:00", "fim": "18:00" },
+      "quarta": { "inicio": "10:00", "fim": "18:00" },
+      "quinta": { "inicio": "10:00", "fim": "18:00" },
+      "sexta": { "inicio": "10:00", "fim": "16:00" },
+      "sabado": { "inicio": null, "fim": null },
+      "domingo": { "inicio": null, "fim": null }
+    }
+    },
+    "82456": {
+      "cpf": "824.560.000-00",
+      "cpfNumerico": "82456",
+      "nomeCompleto": "Dra. Mariana Lima",
+      "email": "mariana.lima@clinica.com",
+      "celular": "(11) 94444-4444",
+      "endereco": "Rua dos Médicos, 103",
+      "nascimento": "25/11/1982",
+      "crm": "82.456",
+      "especialidades": ["Neurologia"],
+      "idAgenda": "AGD82456",
+          "expediente": {
+      "segunda": { "inicio": "09:00", "fim": "17:00" },
+      "terca": { "inicio": "09:00", "fim": "17:00" },
+      "quarta": { "inicio": null, "fim": null },
+      "quinta": { "inicio": "09:00", "fim": "17:00" },
+      "sexta": { "inicio": "09:00", "fim": "17:00" },
+      "sabado": { "inicio": "09:00", "fim": "13:00" },
+      "domingo": { "inicio": null, "fim": null }
+    }
+    },
+    "73159": {
+      "cpf": "731.590.000-00",
+      "cpfNumerico": "73159",
+      "nomeCompleto": "Dr. Roberto Alves",
+      "email": "roberto.alves@clinica.com",
+      "celular": "(11) 95555-5555",
+      "endereco": "Rua dos Médicos, 104",
+      "nascimento": "30/07/1975",
+      "crm": "73.159",
+      "especialidades": ["Ortopedia"],
+      "idAgenda": "AGD73159",
+          "expediente": {
+      "segunda": { "inicio": "08:00", "fim": "18:00" },
+      "terca": { "inicio": "08:00", "fim": "18:00" },
+      "quarta": { "inicio": "08:00", "fim": "18:00" },
+      "quinta": { "inicio": "08:00", "fim": "18:00" },
+      "sexta": { "inicio": "08:00", "fim": "14:00" },
+      "sabado": { "inicio": null, "fim": null },
+      "domingo": { "inicio": null, "fim": null }
+    }
+    }
+  },
+  "agenda": {
+    "AGD90453": {
+      "cpfMedico": "90453",
+      "2025-10": {
+        "31": {
+          "08:00": { "idConsulta": "EXAM001", "disponivel": false },
+          "09:00": { "idConsulta": null, "disponivel": true },
+          "10:00": { "idConsulta": null, "disponivel": true },
+          "10:30": { "idConsulta": "CONS001", "disponivel": false },
+          "11:00": { "idConsulta": null, "disponivel": true },
+          "14:00": { "idConsulta": "CONS003", "disponivel": false },
+          "15:00": { "idConsulta": null, "disponivel": true },
+          "16:00": { "idConsulta": null, "disponivel": true },
+          "17:00": { "idConsulta": null, "disponivel": true },
+          "18:00": { "idConsulta": "CONS002", "disponivel": false }
+        }
+      },
+      "2025-11": {
+        "3": {
+          "09:00": { "idConsulta": "CONS006", "disponivel": false },
+          "10:00": { "idConsulta": null, "disponivel": true },
+          "11:00": { "idConsulta": null, "disponivel": true },
+          "14:00": { "idConsulta": null, "disponivel": true },
+          "15:00": { "idConsulta": null, "disponivel": true },
+          "16:00": { "idConsulta": null, "disponivel": true }
+        },
+        "7": {
+          "09:00": { "idConsulta": null, "disponivel": true },
+          "10:00": { "idConsulta": "CONS009", "disponivel": false },
+          "11:00": { "idConsulta": null, "disponivel": true },
+          "14:00": { "idConsulta": null, "disponivel": true },
+          "15:00": { "idConsulta": null, "disponivel": true },
+          "16:00": { "idConsulta": null, "disponivel": true }
+        }
+      }
+    },
+    "AGD78321": {
+      "cpfMedico": "78321",
+      "2025-10": {
+        "31": {
+          "08:00": { "idConsulta": null, "disponivel": true },
+          "09:00": { "idConsulta": null, "disponivel": true },
+          "10:00": { "idConsulta": null, "disponivel": true },
+          "11:00": { "idConsulta": null, "disponivel": true },
+          "14:00": { "idConsulta": null, "disponivel": true },
+          "15:00": { "idConsulta": null, "disponivel": true },
+          "16:00": { "idConsulta": null, "disponivel": true },
+          "18:00": { "idConsulta": "CONS004", "disponivel": false }
+        }
+      },
+      "2025-11": {
+        "3": {
+          "08:00": { "idConsulta": null, "disponivel": true },
+          "09:00": { "idConsulta": null, "disponivel": true },
+          "10:00": { "idConsulta": null, "disponivel": true },
+          "11:00": { "idConsulta": null, "disponivel": true },
+          "14:00": { "idConsulta": "CONS007", "disponivel": false },
+          "15:00": { "idConsulta": null, "disponivel": true }
+        },
+        "7": {
+          "08:00": { "idConsulta": null, "disponivel": true },
+          "09:00": { "idConsulta": null, "disponivel": true },
+          "10:00": { "idConsulta": null, "disponivel": true },
+          "11:00": { "idConsulta": null, "disponivel": true },
+          "14:00": { "idConsulta": null, "disponivel": true },
+          "15:00": { "idConsulta": "CONS010", "disponivel": false }
+        }
+      }
+    },
+    "AGD65987": {
+      "cpfMedico": "65987",
+      "2025-10": {
+        "31": {
+          "08:00": { "idConsulta": null, "disponivel": true },
+          "09:00": { "idConsulta": null, "disponivel": true },
+          "10:00": { "idConsulta": "CONS005", "disponivel": false },
+          "11:00": { "idConsulta": null, "disponivel": true },
+          "14:00": { "idConsulta": null, "disponivel": true },
+          "15:00": { "idConsulta": null, "disponivel": true },
+          "16:00": { "idConsulta": null, "disponivel": true }
+        }
+      },
+      "2025-11": {
+        "3": {
+          "10:00": { "idConsulta": null, "disponivel": true },
+          "11:00": { "idConsulta": "CONS008", "disponivel": false },
+          "14:00": { "idConsulta": null, "disponivel": true },
+          "15:00": { "idConsulta": null, "disponivel": true },
+          "16:00": { "idConsulta": null, "disponivel": true }
+        },
+        "7": {
+          "10:00": { "idConsulta": null, "disponivel": true },
+          "11:00": { "idConsulta": null, "disponivel": true },
+          "14:00": { "idConsulta": null, "disponivel": true },
+          "15:00": { "idConsulta": null, "disponivel": true },
+          "16:00": { "idConsulta": "CONS011", "disponivel": false }
+        }
+      }
+    },
+    "AGD82456": {
+      "cpfMedico": "82456",
+      "2025-01": {
+        "26": {
+          "09:00": { "idConsulta": null, "disponivel": true },
+          "10:00": { "idConsulta": null, "disponivel": true },
+          "11:00": { "idConsulta": null, "disponivel": true },
+          "14:00": { "idConsulta": null, "disponivel": true },
+          "15:00": { "idConsulta": null, "disponivel": true },
+          "16:00": { "idConsulta": null, "disponivel": true }
+        },
+        "28": {
+          "08:00": { "idConsulta": null, "disponivel": true },
+          "09:00": { "idConsulta": null, "disponivel": true },
+          "10:00": { "idConsulta": null, "disponivel": true },
+          "14:00": { "idConsulta": null, "disponivel": true },
+          "15:00": { "idConsulta": null, "disponivel": true }
+        }
+      }
+    },
+    "AGD73159": {
+      "cpfMedico": "73159",
+      "2025-01": {
+        "25": {
+          "08:00": { "idConsulta": null, "disponivel": true },
+          "09:00": { "idConsulta": null, "disponivel": true },
+          "10:00": { "idConsulta": null, "disponivel": true },
+          "14:00": { "idConsulta": null, "disponivel": true },
+          "15:00": { "idConsulta": null, "disponivel": true }
+        },
+        "27": {
+          "09:00": { "idConsulta": null, "disponivel": true },
+          "10:00": { "idConsulta": null, "disponivel": true },
+          "11:00": { "idConsulta": null, "disponivel": true },
+          "14:00": { "idConsulta": null, "disponivel": true }
+        }
+      }
+    }
+  },
+  "atendente": {
+    "11122233344": {
+      "cpf": "111.222.333-44",
+      "nomeCompleto": "Maria Silva",
+      "email": "atendente@clinica.com",
+      "celular": "(11) 96666-6666",
+      "endereco": "Rua dos Atendentes, 50",
+      "expediente": {
+      "segunda": { "inicio": "08:00", "fim": "18:00" },
+      "terca": { "inicio": "08:00", "fim": "18:00" },
+      "quarta": { "inicio": "08:00", "fim": "18:00" },
+      "quinta": { "inicio": "08:00", "fim": "18:00" },
+      "sexta": { "inicio": "08:00", "fim": "17:00" },
+      "sabado": { "inicio": null, "fim": null },
+      "domingo": { "inicio": null, "fim": null }
+    }
+    }
+  },
+  "logAcoes": {
+    "LOG001": {
+      "idLog": "LOG001",
+      "cpfResponsavel": "11122233344",
+      "acao": "Cadastro de consulta",
+      "timestamp": "2025-01-15T10:30:00",
+      "idAfetado": "CONS001"
+    },
+    "LOG002": {
+      "idLog": "LOG002",
+      "cpfResponsavel": "11122233344",
+      "acao": "Agendamento de consulta",
+      "timestamp": "2025-01-20T14:15:00",
+      "idAfetado": "CONS002"
+    },
+    "LOG003": {
+      "idLog": "LOG003",
+      "cpfResponsavel": "11122233344",
+      "acao": "Agendamento de consulta",
+      "timestamp": "2025-01-21T09:20:00",
+      "idAfetado": "CONS003"
+    },
+    "LOG004": {
+      "idLog": "LOG004",
+      "cpfResponsavel": "11122233344",
+      "acao": "Agendamento de consulta",
+      "timestamp": "2025-01-22T11:45:00",
+      "idAfetado": "CONS004"
+    }
+  }
+}
