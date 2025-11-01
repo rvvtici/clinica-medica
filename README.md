@@ -1,12 +1,12 @@
 # clinica-medica
 
-#### sobre:
+### sobre:
 esse projeto foi feito em etapas: primeiro foi pensado quais funcionalidades uma clínica médica deve ter e foram discutidos três tipos de usuário - paciente, atendente e médico; depois o banco de dados foi construído considerando como implementar as funcionalidades; após isso, o site foi construído para apoiar os usuários atendente e médico enquanto o aplicativo foi pensado para o paciente.
 
-#### ferramentas:
+### ferramentas:
 react (SPA) & firebase (realtime database & authentication)
 
-#### como executar:
+### como executar:
 para executar localmente, é necessária a instalação do node.js. 
 um projeto no firebase deve ser criado e configurados realtime database e authentication (email e senha). é necessário criar os usuários diretamente no authentication, pois o sistema não possui cadastro, e adicioná-los ao database na tabela "users" (utilize o database.json como base e o importe ao database). após isso, crie um .env na mesma pasta do .env.example e adicione valores do firebase usando o exemplo como base.
 no terminal, execute :
@@ -17,8 +17,11 @@ no terminal, execute :
 ```
 depois, entre em http://localhost:5173.
 
+### vídeo com execução real do sistema:
+https://www.youtube.com/watch?v=bFqFHSrE9T4
 
-#### funcionalidades:
+
+### funcionalidades:
 - atendente & médico: login, especialidades médicas, convênios
 - atendente: 
     - home: buscar paciente por cpf -> visualizar dados (+ histórico médico) | editar perfil | consultas médicas e respectivos exames | inserir consulta | visualizar agenda médico
@@ -29,7 +32,7 @@ depois, entre em http://localhost:5173.
     - perfil: visualizar dados pessoais | horários de trabalho
  
 
-#### estrutura banco de dados:
+### estrutura banco de dados:
 - atendente: cpf(PK), nome completo, email, senha, celular, endereco
 - medico: cpf(PK), nome completo, email, senha, celular, endereco, nascimento, crm, especialidades[], idAgenda(FK)
 - paciente: cpf(PK), nome completo, idFamlia(FK), email, celular, endereco, nascimento
@@ -46,10 +49,7 @@ depois, entre em http://localhost:5173.
 - logAcoes: idLog(PK), cpfResponsavel(FK), acao, timestamp, idAfetado(FK) (ou cpf)
 
 
-#### próximos passos:
+### próximos passos:
 - funcionário: cancelar consulta, pagamento consulta/exame
 - médico: visualizar próxima consulta
-
-#### vídeo com execução real do sistema:
-
-youtube.com
+- integrar database: site & app
