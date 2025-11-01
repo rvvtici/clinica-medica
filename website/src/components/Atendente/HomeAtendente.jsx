@@ -943,9 +943,9 @@ const handleSelecionarDia = (mes, dia) => {
         </div>
 
         <div className="form-group">
-          <label>Queixas do Paciente: *</label>
+          <label>Observações adicionais: </label>
           <textarea
-            placeholder="Descreva os sintomas e queixas do paciente"
+            placeholder="Informações complementares sobre a consulta"
             value={formAgendamento.queixas}
             onChange={(e) => setFormAgendamento({...formAgendamento, queixas: e.target.value})}
             rows="3"
@@ -1020,9 +1020,9 @@ const handleSelecionarDia = (mes, dia) => {
     </div>
 
     <div className="form-group">
-      <label>Observações/Queixas:</label>
+      <label>Observações adicionais:</label>
       <textarea
-        placeholder="Observações adicionais sobre o exame"
+        placeholder="Informações complementares sobre o exame"
         value={formAgendamentoExame.queixas}
         onChange={(e) => setFormAgendamentoExame({...formAgendamentoExame, queixas: e.target.value})}
         rows="3"
