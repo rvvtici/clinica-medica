@@ -1,0 +1,366 @@
+.page-especialidades {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page-especialidades .title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.page-especialidades .content {
+  text-align: left;
+  margin-bottom: 20px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.busca {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.section-title {
+  margin: 0 0 12px 0;
+  font-size: 1.3rem;
+  color: #333;
+  font-weight: 600;
+}
+
+
+.container-busca {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+}
+
+.container-section {
+  margin-bottom: 24px;
+  padding: 18px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+}
+
+.container-busca label {
+  font-weight: normal;
+  color: #555;
+  margin-bottom: 2px;
+}
+
+.select-field {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: white;
+}
+
+.select-field:disabled {
+  background-color: #f5f5f5;
+  color: #999;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-field input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.input-field input:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.ou {
+  text-align: center;
+  margin: 12px 0;
+}
+
+.ou p {
+  color: #666;
+  font-weight: normal;
+  position: relative;
+}
+
+.ou p::before,
+.ou p::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.ou p::before {
+  left: 0;
+}
+
+.ou p::after {
+  right: 0;
+}
+
+
+.result br {
+  margin-bottom: 5px;
+  display: block;
+  content: "";
+}
+
+.label-busca {
+  font-weight: bold;
+  color: #333;
+}
+
+
+
+.btn-buscar {
+  background-color: black;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.btn-buscar:hover {
+  background-color: #333;
+}
+
+.resultados-busca {
+  margin-top: 20px;
+}
+
+.resultados-busca h4 {
+  color: #333;
+  margin-bottom: 10px;
+  margin-top: 8px;
+  text-align: left;
+}
+
+.resultados-especialidade h4,
+.resultados-busca h4 {
+  color: #555;
+  margin-bottom: 8px;
+  margin-top: 12px;
+  text-align: left;
+  font-weight: normal;
+  font-size: 0.95rem;
+}
+
+
+.result {
+  background-color: white;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #e6e6e6;
+  margin-top: 8px;
+  text-align: left;
+  color: #555;
+}
+
+.result p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+}
+
+.result p strong {
+  font-weight: 500;
+  color: #333;
+}
+
+
+.input-field input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-field input:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.container-especialidades {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+
+.card-especialidade:last-child {
+  border-bottom: none;
+}
+
+.card-especialidade-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  cursor: default;
+  transition: none;
+}
+
+.card-especialidade-head:hover {
+  background-color: transparent;
+  border-radius: 0;
+}
+
+
+.nome-especialidade {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+  font-weight: normal;
+}
+
+.preco-especialidade {
+  font-weight: normal;
+  color: #555;
+}
+
+.card-especialidade-body {
+  margin-top: 8px;
+  padding-left: 0;
+}
+
+.card-especialidade-body ul {
+  margin: 6px 0 0 20px;
+  padding: 0;
+  color: #555;
+  font-size: 0.95em;
+}
+
+.card-especialidade-body li {
+  margin-bottom: 4px;
+  font-weight: normal;
+}
+
+.container-busca-wrapper {
+  margin-top: 10px;
+  padding: 12px 18px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+}
+
+.convenios-tag {
+  display: block;
+  color: #777;
+  font-size: 0.85em;
+  margin-top: 3px;
+  font-style: normal;
+}
+
+.convenios-list {
+  margin: 4px 0;
+  color: #555;
+  font-size: 0.95em;
+}
+
+/* título menor para o bloco de busca */
+.title-small {
+  margin: 0 0 12px 0;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+/* inner para garantir espaçamento do componente BuscaMedico */
+.busca-container-inner {
+  margin-top: 8px;
+}
+
+/* divisor */
+.divisor {
+  border: none;
+  height: 1px;
+  background-color: #e6e6e6;
+  margin: 20px 0;
+}
+
+.input-medico {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+  color: #333;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input-medico:focus {
+  border-color: #333;
+}
+
+.input-medico::placeholder {
+  color: #999;
+  font-style: normal;
+}
+
+.select-field {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: white;
+}
+
+.select-field:focus {
+  outline: none;
+  border-color: #333;
+}
+
+/* Adicionar após .form-group select */
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.form-group textarea:focus {
+  outline: none;
+  border-color: #333;
+}
+
+/* Adicionar após .form-agendar-consulta */
+.form-agendar-exame {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.form-agendar-exame .form-group {
+  margin-bottom: 15px;
+}

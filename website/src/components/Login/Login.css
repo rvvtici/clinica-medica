@@ -109,6 +109,7 @@
   cursor: pointer;
   margin-top: 10px;
   width: 100%;
+  justify-content: center;
 }
 
 .btn-buscar:hover:not(:disabled) {
@@ -128,23 +129,4 @@
   border: 1px solid #fcc;
   text-align: center;
   margin-top: 10px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .page-login {
-    padding: 15px;
-  }
-  
-  .busca {
-    gap: 20px;
-  }
-  
-  .container-busca {
-    padding: 15px;
-  }
-  
-  .tipo-selector {
-    flex-direction: column;
-  }
 }

@@ -1,73 +1,16 @@
-.home-atendente {
+.home-medico {
   min-height: 100vh;
   background: #f5f5f5;
 }
 
-.home-atendente {
+.home-medico {
   width: 100%;
 }
 
-.header-atendente {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px 20px;
-  margin: 0;
-  font-size: 14px;
-  background: white;
-}
-
-.header-atendente h1 {
-  font-size: 16px;
-  font-weight: 100;
-  margin: 0;
-  color: black;
-}
-
-.header-atendente p:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.user-info {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.user-badge {
-  background: #f0f0f0;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-weight: bold;
-  color: #333;
-}
-
-.user-email {
-  color: #666;
-}
-
-.profile-btn {
-  color: white;
-  background: black;
-  text-decoration: none;
-  border: 6px solid black;
-  border-radius: 6px;
-  padding: 2px 6px;
-  margin: 0px 0px 0px 6px;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.logout-btn {
-  text-decoration: none;
-  color: black;
-  padding: 6px 12px 6px 12px;
-  margin: 0px 0px 0px 4px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 14px;
+.main-medico {
+  padding: 0px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .title {
@@ -78,14 +21,48 @@
   color: #333;
 }
 
-.main-atendente {
-  padding: 0px;
-  max-width: 1200px;
-  margin: 0 auto;
+/* Próxima Consulta */
+.secao-proxima-consulta {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
+.secao-proxima-consulta .titulo-secao {
+  color: white;
+  border-bottom-color: rgba(255,255,255,0.3);
+  margin-bottom: 25px;
+}
+
+.proxima-consulta-card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+.btn-acessar-online {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-acessar-online:hover {
+  background: #218838;
+}
+
+/* Seções */
 .secao-busca-paciente,
-.secao-agendar {
+.secao-agenda {
   background: white;
   padding: 30px;
   border-radius: 8px;
@@ -105,11 +82,11 @@
   border-bottom: 2px solid #ddd;
 }
 
+/* Busca */
 .container-busca {
   margin-bottom: 30px;
 }
 
-/* Nova estrutura de busca 50/50 */
 .input-group-busca {
   display: flex;
   gap: 0;
@@ -136,33 +113,6 @@
   margin: 0;
 }
 
-.input-group {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.input-group label {
-  font-weight: bold;
-  color: #333;
-  min-width: 120px;
-}
-
-.input-group input,
-.input-group select {
-  flex: 1;
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-.input-group input:focus,
-.input-group select:focus {
-  outline: none;
-  border-color: #333;
-}
-
 .btn-buscar {
   background-color: black;
   color: white;
@@ -186,43 +136,16 @@
   margin-top: 20px;
 }
 
-/* Header com botão de editar */
-.dados-paciente-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.dados-paciente-header h3 {
-  margin: 0;
-  color: #333;
-}
-
-.btn-editar-perfil {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: black;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 0.95rem;
-  transition: background 0.3s;
-}
-
-.btn-editar-perfil:hover {
-  background: #333;
-}
-
-/* Dados do paciente em duas colunas */
 .dados-paciente {
   background: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
   border: 1px solid #ddd;
+}
+
+.dados-paciente h3 {
+  margin: 0 0 15px 0;
+  color: #333;
 }
 
 .info-grid-duas-colunas {
@@ -236,51 +159,6 @@
   margin: 0;
   color: #666;
   font-size: 0.95rem;
-}
-
-/* Separador de convênios */
-.convenios-section {
-  border-top: 2px solid #ddd;
-  padding-top: 20px;
-  margin-top: 20px;
-}
-
-.convenios-section h4 {
-  margin: 0 0 15px 0;
-  color: #333;
-}
-
-.convenios-list-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.convenio-item {
-  background: white;
-  padding: 15px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-}
-
-.convenio-item p {
-  margin: 0;
-  color: #666;
-  font-size: 0.95rem;
-}
-
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 10px;
-}
-
-.info-grid p {
-  margin: 5px 0;
-  color: #666;
 }
 
 .historico-paciente {
@@ -309,7 +187,7 @@
   color: #856404;
 }
 
-/* Consultas e Exames lado a lado */
+/* Consultas e Exames */
 .consultas-exames-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -323,7 +201,6 @@
   flex-direction: column;
 }
 
-/* Headers expandíveis */
 .consultas-header,
 .exames-header {
   display: flex;
@@ -334,6 +211,7 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 .consultas-header:hover,
@@ -350,7 +228,6 @@
   font-size: 1.2rem;
 }
 
-/* Consultas Anteriores */
 .consultas-anteriores {
   background: #f9f9f9;
   padding: 20px;
@@ -407,16 +284,6 @@
   color: #721c24;
 }
 
-.status.pago {
-  background: #d4edda;
-  color: #155724;
-}
-
-.status.pendente {
-  background: #fff3cd;
-  color: #856404;
-}
-
 .consulta-detalhes {
   padding: 15px;
   background: #f9f9f9;
@@ -460,15 +327,8 @@
 }
 
 .exames-agendados,
-.exames-realizados,
-.resultados-exames {
+.exames-realizados {
   margin-bottom: 20px;
-}
-
-.exames-agendados:last-child,
-.exames-realizados:last-child,
-.resultados-exames:last-child {
-  margin-bottom: 0;
 }
 
 .exames-content h4 {
@@ -498,95 +358,7 @@
   padding: 20px;
 }
 
-/* Busca Médico */
-.container-busca-medico {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-.busca-medico-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-}
-
-.ou-divider {
-  text-align: center;
-  color: #666;
-  font-weight: bold;
-  position: relative;
-  margin: 10px 0;
-}
-
-.ou-divider::before,
-.ou-divider::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 45%;
-  height: 1px;
-  background-color: #ddd;
-}
-
-.ou-divider::before {
-  left: 0;
-}
-
-.ou-divider::after {
-  right: 0;
-}
-
-/* Informações do Médico */
-.info-medico {
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-}
-
-.info-medico h3,
-.info-medico h4 {
-  margin: 0 0 15px 0;
-  color: #333;
-}
-
-.medico-dados {
-  background: white;
-  padding: 15px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  margin-bottom: 20px;
-}
-
-.medico-dados p {
-  margin: 5px 0;
-  color: #666;
-}
-
-.convenios-aceitos {
-  margin-bottom: 20px;
-}
-
-.convenios-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.convenio-badge {
-  background: #667eea;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-}
-
-/* Agenda - Calendário real */
+/* Agenda */
 .agenda-medico {
   margin-top: 20px;
 }
@@ -601,6 +373,24 @@
 .agenda-header h4 {
   margin: 0;
   color: #333;
+  flex: 1;
+  text-align: center;
+}
+
+.btn-nav-mes {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+  font-weight: 500;
+}
+
+.btn-nav-mes:hover {
+  background: #5568d3;
 }
 
 .calendario-mes {
@@ -608,6 +398,7 @@
   padding: 15px;
   border-radius: 8px;
   border: 1px solid #ddd;
+  margin-bottom: 20px;
 }
 
 .dias-semana {
@@ -680,7 +471,6 @@
   color: transparent;
 }
 
-
 .dia-calendario.sem-agenda {
   background: #f5f5f5;
   border-color: #e0e0e0;
@@ -698,9 +488,8 @@
   color: #999;
 }
 
-
-/* Horários */
-.horarios-dia {
+/* Consultas do Dia */
+.consultas-do-dia {
   background: white;
   padding: 20px;
   border-radius: 8px;
@@ -708,120 +497,201 @@
   margin-top: 20px;
 }
 
-.horarios-dia h4 {
-  margin: 0 0 15px 0;
+.consultas-do-dia h4 {
+  margin: 0 0 20px 0;
   color: #333;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
 }
 
-.lista-horarios {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 10px;
-}
-
-.horario-item {
-  padding: 12px;
-  border-radius: 5px;
+.lista-consultas-dia {
   display: flex;
   flex-direction: column;
+  gap: 15px;
+}
+
+.consulta-dia-item {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.consulta-dia-header {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 5px;
-  border: 2px solid;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: background 0.3s;
 }
 
-.horario-item.disponivel {
-  background: #d4edda;
-  border-color: #28a745;
+.consulta-dia-header:hover {
+  background: #f0f0f0;
 }
 
-.horario-item.disponivel:hover {
-  background: #c3e6cb;
-  transform: translateY(-2px);
+.consulta-info {
+  flex: 1;
 }
 
-.horario-item.ocupado {
-  background: #f8d7da;
-  border-color: #dc3545;
-  cursor: not-allowed;
-}
-
-.horario-item.selecionado {
-  background: black;
-  border-color: black;
-}
-
-.hora {
+.consulta-horario-info {
+  font-size: 1.2rem;
   font-weight: bold;
+  color: #333;
+  margin: 0 0 5px 0;
+}
+
+.consulta-paciente-nome {
   font-size: 1.1rem;
-}
-
-.horario-item.disponivel .hora {
-  color: #155724;
-}
-
-.horario-item.ocupado .hora {
-  color: #721c24;
-}
-
-.horario-item.selecionado .hora {
-  color: white;
-}
-
-.status-horario {
-  font-size: 0.85rem;
   color: #666;
+  margin: 0 0 5px 0;
 }
 
-.horario-item.selecionado .status-horario {
-  color: white;
+.consulta-especialidade {
+  font-size: 0.9rem;
+  color: #999;
+  margin: 0;
 }
 
-/* Formulário de agendamento */
-.form-agendar-consulta {
+.consulta-dia-detalhes {
+  padding: 20px;
+  background: white;
+  border-top: 1px solid #ddd;
+}
+
+.paciente-info-completa {
+  margin-bottom: 20px;
+}
+
+.info-section {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+.info-section h5 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+.info-section p {
+  margin: 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Ações da Consulta */
+.acoes-consulta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.btn-acao {
+  background: white;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+  justify-content: center;
+}
+
+.btn-acao:hover {
+  background: #f5f5f5;
+  border-color: #333;
+}
+
+/* Formulários de Ação */
+.form-acao {
   background: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
   border: 1px solid #ddd;
-  margin-top: 20px;
+  margin-top: 15px;
+  animation: slideDown 0.3s ease;
 }
 
-.form-agendar-consulta h4 {
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-acao h5 {
   margin: 0 0 15px 0;
   color: #333;
+  font-size: 1.1rem;
 }
 
-.form-group {
+.input-field {
   margin-bottom: 15px;
 }
 
-.form-group label {
+.input-field label {
   display: block;
   font-weight: bold;
   color: #333;
   margin-bottom: 5px;
+  font-size: 0.9rem;
 }
 
-.form-group input,
-.form-group select {
+.input-field input,
+.input-field textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 1rem;
+  font-family: inherit;
+  box-sizing: border-box;
 }
 
-.form-group input:focus,
-.form-group select:focus {
+.input-field input:focus,
+.input-field textarea:focus {
   outline: none;
   border-color: #333;
+}
+
+.input-field textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.btn-adicionar {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  transition: background 0.3s;
+}
+
+.btn-adicionar:hover {
+  background: #5568d3;
 }
 
 .form-actions {
   display: flex;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .btn-confirmar {
@@ -856,25 +726,74 @@
   background: #c82333;
 }
 
+.sem-consultas-dia {
+  text-align: center;
+  padding: 30px;
+  color: #999;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-top: 20px;
+}
+
+/* Paciente Header e Horário */
+.paciente-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.paciente-dados {
+  flex: 1;
+}
+
+.paciente-dados h4 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.paciente-dados p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.consulta-horario {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.consulta-horario p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #333;
+  font-weight: bold;
+  justify-content: flex-end;
+}
+
+.detalhes-consulta {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
-  .main-atendente {
-    padding: 20px;
+  .main-medico {
+    padding: 15px;
   }
   
-  .input-group {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  
-  .input-group label {
-    min-width: auto;
-  }
-  
-  .info-grid {
-    grid-template-columns: 1fr;
-  }
-
   .info-grid-duas-colunas {
     grid-template-columns: 1fr;
   }
@@ -883,28 +802,21 @@
     grid-template-columns: 1fr;
   }
   
-  .calendario {
-    grid-template-columns: repeat(7, 1fr);
-  }
-  
-  .lista-horarios {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .convenio-item {
+  .acoes-consulta {
     grid-template-columns: 1fr;
   }
+
+  .paciente-header {
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .consulta-horario {
+    text-align: left;
+    align-items: flex-start;
+  }
+  
+  .consulta-horario p {
+    justify-content: flex-start;
+  }
 }
-
-/* Botão pequeno */
-.btn-pequeno {
-  padding: 8px 16px !important;
-  font-size: 0.9rem !important;
-  width: auto !important;
-}
-
-
-
-
-
-

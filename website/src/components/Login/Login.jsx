@@ -8,7 +8,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [tipo, setTipo] = useState('atendente');
   const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   
   const { login } = useAuth();
   const navigate = useNavigate();
@@ -16,7 +16,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
-    setLoading(true);
+    // setLoading(true);
 
     try {
       await login(email, password, tipo);
@@ -31,9 +31,10 @@ const Login = () => {
       } else {
         setError(error.message || 'Erro ao fazer login. Tente novamente.');
       }
-    } finally {
-      setLoading(false);
-    }
+    } 
+    // finally {
+    //   setLoading(false);
+    // }
   };
 
   return (
@@ -100,9 +101,10 @@ const Login = () => {
               <button 
                 type="submit" 
                 className="btn-buscar" 
-                disabled={loading}
+                // disabled={loading}
               >
-                {loading ? 'Entrando...' : 'Entrar'}
+                {'Entrar'}
+                {/* {loading ? 'Entrando...' : 'Entrar'} */}
               </button>
             </form>
           </div>

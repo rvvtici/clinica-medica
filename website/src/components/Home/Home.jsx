@@ -37,35 +37,7 @@ const Home = () => {
 
       <main className="home-main">
         {userType === 'medico' ? (
-
-          <div className="dashboard medico-dashboard">
             <HomeMedico />
-            <h2>Bem-vindo, Doutor(a)!</h2>
-            <div className="dashboard-grid">
-              <div className="dashboard-card">
-                <h3>Pacientes Hoje</h3>
-                <p className="dashboard-number">12</p>
-              </div>
-              <div className="dashboard-card">
-                <h3>Próxima Consulta</h3>
-                <p className="dashboard-text">14:30 - João Silva</p>
-              </div>
-              <div className="dashboard-card">
-                <h3>Pendências</h3>
-                <p className="dashboard-number">3</p>
-              </div>
-            </div>
-            
-            <div className="menu-section">
-              <h3>Menu do Médico</h3>
-              <div className="menu-buttons">
-                <button className="menu-btn">Agenda</button>
-                <button className="menu-btn">Prontuários</button>
-                <button className="menu-btn">Prescrições</button>
-                <button className="menu-btn">Exames</button>
-              </div>
-            </div>
-          </div>
         ) : (
           <div className="dashboard atendente-dashboard">
             <HomeAtendente />
