@@ -4,6 +4,8 @@ import { useAuth } from '../Auth/AuthContext';
 import { ref, get } from 'firebase/database';
 import { database } from '../Firebase/firebaseConfig';
 import './Profile.css';
+import HeaderAtendente from "../Atendente/HeaderAtendente";
+import HeaderMedico from "../Medico/HeaderMedico";
 
 const Profile = () => {
   const { user, userType, logout } = useAuth();
@@ -15,11 +17,41 @@ const Profile = () => {
     const fetchUserData = async () => {
       if (user) {
         try {
+          // Buscar dados do usuário na tabela users
           const userRef = ref(database, `users/${user.uid}`);
           const snapshot = await get(userRef);
           
           if (snapshot.exists()) {
-            setUserData(snapshot.val());
+            const userInfo = snapshot.val();
+            
+            // Buscar dados completos na tabela específica (medico ou atendente)
+            let detailedData = null;
+            
+            if (userType === 'medico') {
+              const medicosRef = ref(database, 'medico');
+              const medicosSnap = await get(medicosRef);
+              
+              if (medicosSnap.exists()) {
+                const medicos = medicosSnap.val();
+                // Procurar médico pelo email
+                detailedData = Object.values(medicos).find(
+                  m => m.email === userInfo.email
+                );
+              }
+            } else if (userType === 'atendente') {
+              const atendentesRef = ref(database, 'atendente');
+              const atendentesSnap = await get(atendentesRef);
+              
+              if (atendentesSnap.exists()) {
+                const atendentes = atendentesSnap.val();
+                // Procurar atendente pelo email
+                detailedData = Object.values(atendentes).find(
+                  a => a.email === userInfo.email
+                );
+              }
+            }
+            
+            setUserData({ ...userInfo, ...detailedData });
           }
         } catch (error) {
           console.error('Erro ao buscar dados do usuário:', error);
@@ -30,7 +62,7 @@ const Profile = () => {
     };
 
     fetchUserData();
-  }, [user]);
+  }, [user, userType]);
 
   const handleLogout = async () => {
     try {
@@ -41,157 +73,110 @@ const Profile = () => {
     }
   };
 
-  const handleBackToHome = () => {
-    navigate('/home');
+  const diasSemana = {
+    segunda: 'Segunda-feira',
+    terca: 'Terça-feira',
+    quarta: 'Quarta-feira',
+    quinta: 'Quinta-feira',
+    sexta: 'Sexta-feira',
+    sabado: 'Sábado',
+    domingo: 'Domingo'
   };
 
   if (loading) {
     return (
-      <div className="profile-container">
-        <div className="loading">Carregando perfil...</div>
+      <div className="profile-page">
+        <p className="title">Carregando perfil...</p>
       </div>
     );
   }
 
   return (
-    <div className="profile-container">
-      <header className="profile-header">
-        <div className="header-left">
-          <button onClick={handleBackToHome} className="back-btn">
-            ← Voltar
-          </button>
-          <h1>Meu Perfil</h1>
-        </div>
-        <button onClick={handleLogout} className="logout-btn">Sair</button>
-      </header>
+    <>
+      {userType === 'medico' ? (
+        <HeaderMedico />
+      ) : (
+        <HeaderAtendente />
+      )}
+      
+      <div className="profile-page">
+        <h2 className="title">Meu Perfil</h2>
+        
 
-      <main className="profile-main">
-        <div className="profile-card">
-          <div className="profile-avatar">
-            <div className={`avatar-circle ${userType}`}>
-              {userData?.nome?.charAt(0) || 'U'}
+        {/* Dados Pessoais */}
+        <div className="container-section">
+          <h3 className="section-title">Dados Pessoais</h3>
+          <div className="profile-data">
+            <div className="data-row">
+              <span className="data-label">Nome Completo:</span>
+              <span className="data-value">{userData?.nomeCompleto || '-'}</span>
             </div>
-          </div>
-
-          <div className="profile-info">
-            <h2>{userData?.nome || 'Nome não disponível'}</h2>
-            <span className={`badge ${userType}`}>
-              {userType === 'medico' ? '👨‍⚕️ Médico' : '👔 Atendente'}
-            </span>
-          </div>
-
-          <div className="profile-details">
-            <div className="detail-section">
-              <h3>Informações Pessoais</h3>
-              <div className="detail-grid">
-                <div className="detail-item">
-                  <label>Nome Completo</label>
-                  <p>{userData?.nome || '-'}</p>
-                </div>
-                <div className="detail-item">
-                  <label>Email</label>
-                  <p>{userData?.email || user?.email || '-'}</p>
-                </div>
-                <div className="detail-item">
-                  <label>Tipo de Usuário</label>
-                  <p className="capitalize">{userData?.tipo || '-'}</p>
-                </div>
-                {userType === 'medico' && userData?.crm && (
-                  <div className="detail-item">
-                    <label>CRM</label>
-                    <p>{userData.crm}</p>
-                  </div>
-                )}
-              </div>
+            <div className="data-row">
+              <span className="data-label">Email:</span>
+              <span className="data-value">{userData?.email || '-'}</span>
             </div>
-
-            <div className="detail-section">
-              <h3>Informações do Sistema</h3>
-              <div className="detail-grid">
-                <div className="detail-item">
-                  <label>UID (Token Firebase)</label>
-                  <p className="uid-text">{user?.uid || '-'}</p>
-                </div>
-                <div className="detail-item">
-                  <label>Status</label>
-                  <p className="status-active">✓ Ativo</p>
-                </div>
-              </div>
+            <div className="data-row">
+              <span className="data-label">CPF:</span>
+              <span className="data-value">{userData?.cpf || '-'}</span>
             </div>
-
-            {userType === 'medico' ? (
-              <div className="detail-section stats-section">
-                <h3>Estatísticas</h3>
-                <div className="stats-grid">
-                  <div className="stat-card">
-                    <div className="stat-icon">📅</div>
-                    <div className="stat-info">
-                      <p className="stat-number">127</p>
-                      <p className="stat-label">Consultas este mês</p>
-                    </div>
-                  </div>
-                  <div className="stat-card">
-                    <div className="stat-icon">⏱️</div>
-                    <div className="stat-info">
-                      <p className="stat-number">8.5h</p>
-                      <p className="stat-label">Média diária</p>
-                    </div>
-                  </div>
-                  <div className="stat-card">
-                    <div className="stat-icon">⭐</div>
-                    <div className="stat-info">
-                      <p className="stat-number">4.9</p>
-                      <p className="stat-label">Avaliação média</p>
-                    </div>
-                  </div>
+            <div className="data-row">
+              <span className="data-label">Celular:</span>
+              <span className="data-value">{userData?.celular || '-'}</span>
+            </div>
+            <div className="data-row">
+              <span className="data-label">Endereço:</span>
+              <span className="data-value">{userData?.endereco || '-'}</span>
+            </div>
+            
+            {userType === 'medico' && (
+              <>
+                <div className="data-row">
+                  <span className="data-label">Data de Nascimento:</span>
+                  <span className="data-value">{userData?.nascimento || '-'}</span>
                 </div>
-              </div>
-            ) : (
-              <div className="detail-section stats-section">
-                <h3>Estatísticas</h3>
-                <div className="stats-grid">
-                  <div className="stat-card">
-                    <div className="stat-icon">📋</div>
-                    <div className="stat-info">
-                      <p className="stat-number">342</p>
-                      <p className="stat-label">Agendamentos este mês</p>
-                    </div>
-                  </div>
-                  <div className="stat-card">
-                    <div className="stat-icon">📞</div>
-                    <div className="stat-info">
-                      <p className="stat-number">89</p>
-                      <p className="stat-label">Atendimentos hoje</p>
-                    </div>
-                  </div>
-                  <div className="stat-card">
-                    <div className="stat-icon">✅</div>
-                    <div className="stat-info">
-                      <p className="stat-number">98%</p>
-                      <p className="stat-label">Taxa de conclusão</p>
-                    </div>
-                  </div>
+                <div className="data-row">
+                  <span className="data-label">CRM:</span>
+                  <span className="data-value">{userData?.crm || '-'}</span>
                 </div>
-              </div>
+                <div className="data-row">
+                  <span className="data-label">Especialidades:</span>
+                  <span className="data-value">
+                    {userData?.especialidades?.join(', ') || '-'}
+                  </span>
+                </div>
+              </>
             )}
           </div>
+        </div>
 
-          <div className="profile-actions">
-            <button className="action-btn primary" onClick={handleBackToHome}>
-              Ir para Dashboard
-            </button>
-            <button className="action-btn secondary" onClick={handleLogout}>
-              Sair do Sistema
-            </button>
+        {/* Horários de Trabalho */}
+        <div className="container-section">
+          <h3 className="section-title">Horários de Trabalho</h3>
+          <div className="expediente-list">
+            {userData?.expediente ? (
+              Object.entries(diasSemana).map(([key, dia]) => {
+                const horario = userData.expediente[key];
+                const trabalha = horario?.inicio && horario?.fim;
+                
+                return (
+                  <div key={key} className="expediente-row">
+                    <span className="dia-semana">{dia}</span>
+                    <span className={`horario-value ${!trabalha ? 'folga' : ''}`}>
+                      {trabalha 
+                        ? `${horario.inicio} - ${horario.fim}`
+                        : '-'
+                      }
+                    </span>
+                  </div>
+                );
+              })
+            ) : (
+              <p className="sem-dados">Horários não cadastrados</p>
+            )}
           </div>
         </div>
-
-        <div className="debug-info">
-          <h4>🔍 Debug - Dados do Token</h4>
-          <pre>{JSON.stringify({ user, userType, userData }, null, 2)}</pre>
-        </div>
-      </main>
-    </div>
+      </div>
+    </>
   );
 };
 

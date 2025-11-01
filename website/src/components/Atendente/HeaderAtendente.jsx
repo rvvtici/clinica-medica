@@ -1,37 +1,45 @@
-import React from "react";
-import "./HeaderAtendente.css";
-import { Link } from "react-router-dom";
-
-import { useAuth } from '../Auth/AuthContext';
-import { AuthProvider } from '../Auth/AuthContext';
-import ProtectedRoute from '../Auth/ProtectedRoute';
-
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Home from '../Home/Home';
-import Profile from '../Perfil/Profile';
+import { useAuth } from '../Auth/AuthContext';
+import './HeaderAtendente.css';
 
 const HeaderAtendente = () => {
-
     const { user, logout } = useAuth();
     const navigate = useNavigate();
 
-    return (
-        <header id="header_atendente">
-            <div>
-                <p>
-                Clínica Médica
-                </p>
-            </div>
+    const handleLogout = async () => {
+    try {
+      await logout();
+      navigate('/login');
+    } catch (error) {
+      console.error('Erro ao fazer logout:', error);
+    }
+  };
 
-            <div>
-            <nav className="nav_links">
-                <p onClick={() => navigate('/teste')} className="perfil">Teste</p>
-                <p onClick={() => navigate('/profile')} className="nav_link">Perfil</p>
-            </nav>
-            </div>
-    
-        </header>
-    );
-    };
+
+
+
+    return(
+              <header className="header-atendente">
+        <div>
+        <h1>Clínica Médica</h1>
+
+        </div>
+        <div className="user-info">
+          
+          <p onClick={() => navigate('/home')} >Home</p>
+          <p onClick={() => navigate('/especialidades')} >Especialidades</p>
+          <p onClick={() => navigate('/convenios')} >Convênios</p>
+        </div>
+        <div className="user-info">
+          <span className="user-email">{user?.email}</span>
+          <button onClick={() => navigate('/profile')} className="profile-btn">
+            Perfil
+          </button>
+          <button onClick={handleLogout} className="logout-btn">Sair</button>
+        </div>
+      </header>
+    )
+}
 
 export default HeaderAtendente;

@@ -13,28 +13,29 @@ para banco de dados: criar um .env e adicionar valores do firebase usando o .env
 - médico:
     - home: visualizar agenda | proxima consulta | botões: consulta, online, perfil
     - consulta: consulta atual (caso online, mostra link) | buscar paciente por cpf | proxima consulta (caso online, mostra link)
-    - perfil: visualizar dados pessoais | horários de trabalho & locais de atendimento
-    todas as buscas por pacientes retornam dados do paciente e botões ampliáveis de: histórico de consultas | resultado de exames | receita médica | atestado 
+    - perfil: visualizar dados pessoais | horários de trabalho
+    *todas as buscas por pacientes retornam dados do paciente e botões ampliáveis de: histórico de consultas | resultado de exames | receita médica | atestado 
 
 
 
 #### banco de dados:
-- paciente: cpf(PK), nome completo, idFamlia(FK), email, celular, endereco, nascimento
-- convenioPaciente: carteirinha(PK), idConv(FK), cpf(FK), validade
-- convenioClinica: idConv(PK), nome, medicos[](FK)
-- familia: idFamilia(PK), cpf(FK)
-- consulta/exame/retorno: idConsulta(PK), cpfPaciente(FK), cpfMedico(FK), data, horario, especialidade, status, pagamento(FK), tipo(consulta/exame/retorno), local(presencial/online)
-- pagamento: idPagamento(PK), status, data
-- registroMedico (pós-consulta): idRegistroMedico(PK), idConsulta(FK), examesSolicitados, medicamentosSolicitados, observacoesMedicas
-- dadosAdicionaisPaciente: cpf(FK), historico, medicamentos[], tipoSangue, contatoEmergencia{nome completo, celular} 
-- examesTipo: idExame(PK), tipo, preco
-- consultasTipo: idConsultaTipo(PK), tipo, preco
+- *atendente: cpf(PK), nome completo, email, senha, celular, endereco
 - medico: cpf(PK), nome completo, email, senha, celular, endereco, nascimento, crm, especialidades[], idAgenda(FK)
-- agenda: cpfMedico(PK), data { hora { idConsulta(FK), disponivel(boolean) }}
-- atendente: cpf(PK), nome completo, email, senha, celular, endereco
-- logAcoes: idLog(PK), cpfResponsavel(FK), acao, timestamp, idAfetado(FK) (ou cpf)
+- paciente: cpf(PK), nome completo, idFamlia(FK), email, celular, endereco, nascimento
+- *convenioPaciente: carteirinha(PK), idConv(FK), cpf(FK), validade
+- *familia: idFamilia(PK), cpf(FK)
+- *dadosAdicionaisPaciente: cpf(FK), historico, medicamentos[], tipoSangue, contatoEmergencia{nome completo, celular} 
+- *consulta/exame/retorno: idConsulta(PK), cpfPaciente(FK), cpfMedico(FK), data, horario, especialidade, status(realizada/cancelada/agendada), pagamento(pago/pendente)(FK), tipo(consulta/exame/retorno), local(presencial/online), link(caso online), queixas
+- *pagamento: idPagamento(PK), status, data
+- *registroMedico (pós-consulta): idRegistroMedico(PK), idConsulta(FK), examesSolicitados[], medicamentosSolicitados[], observacoesMedicas, atestado[]
+- *convenioClinica: idConv(PK), nome, medicos[](FK)
+- *consultasTipo: idConsultaTipo(PK), especialidades, preco
+- *examesTipo: idExame(PK), tipo, preco, coberturaConvenio
+- *agenda: cpfMedico(PK), data { hora { idConsulta(FK), disponivel(boolean) }}
+- **logAcoes: idLog(PK), cpfResponsavel(FK), acao, timestamp, idAfetado(FK) (ou cpf)
 
-
+*feito
+**implementar no crud!
 
 
 

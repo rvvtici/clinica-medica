@@ -5,6 +5,11 @@ import ProtectedRoute from './components/Auth/ProtectedRoute';
 import Login from './components/Login/Login';
 import Home from './components/Home/Home';
 import Profile from './components/Perfil/Profile';
+import Especialidades from './components/Especialidades/Especialidades';
+import Convenios from './components/Convenios/Convenios';
+
+import EditarPerfil from './components/Atendente/EditarPerfil';
+
 
 function App() {
   return (
@@ -20,6 +25,8 @@ function App() {
               </ProtectedRoute>
             } 
           />
+
+
           <Route 
             path="/profile" 
             element={
@@ -28,8 +35,21 @@ function App() {
               </ProtectedRoute>
             } 
           />
+
+
+          <Route 
+            path="/editar-perfil" 
+            element={
+              <ProtectedRoute>
+                <EditarPerfil />
+              </ProtectedRoute>
+            } 
+          />
+
+          <Route path="/especialidades" element={<Especialidades />} />
+          <Route path="/convenios" element={<Convenios />} />
           <Route path="/" element={<Navigate to="/login" replace />} />
-          <Route path="*" element={<Navigate to="/login" replace />} />
+          <Route path="*" element={<Navigate to="/home" replace />} />
         </Routes>
       </AuthProvider>
     </Router>
